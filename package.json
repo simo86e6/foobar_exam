@@ -1,0 +1,26 @@
+{
+  "name": "foobar_exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simo86e6/foobar_exam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simo86e6/foobar_exam/issues"
+  },
+  "homepage": "https://github.com/simo86e6/foobar_exam#readme",
+  "devDependencies": {
+    "sass": "^1.32.13",
+    "vite": "^2.3.3"
+  }
+}
