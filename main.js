@@ -13,7 +13,7 @@ getData();
 
 
 async function getData(){
-
+   
     const getBarStats = await fetch(barStatsUrl);
     const barStats = await getBarStats.json();
     displayStats(barStats);
@@ -33,7 +33,7 @@ function displayStats(barStats){
     updateBartenders(barStats);
     updateQueue(barStats);
     updateOrders(barStats);
-    // updateStorage(barStats);
+    updateStorage(barStats);
      
   
 
@@ -43,29 +43,6 @@ function displayStats(barStats){
    
 
 }
-
-// function updateStorage(barStats){
-//     document.getElementById("storage").innerHTML = "";
-//     let beerTypes = barStats.taps;
-//     //Dette sortere hver tap efter hvor meget øl de har tilbage (lavest først i arrayet)
-//     beerTypes.sort(function(a, b){return a.level - b.level});
-
-//     let lowestLevels = beerTypes.slice(0, 3);
-
-//     let counter = 1;
-//     lowestLevels.forEach(beerType => {
-//         debugger;
-//         let elementId = "stock" + counter + "_img";
-//         let imgSrc = "/img/" + beerType.beer + ".jpg";
-//         document.getElementById(elementId).src = imgSrc;
-//         document.getElementById("stock1_name").innerHTML = beerType.name;
-//         document.getElementById("stock1_level").innerHTML = beerType.level;
-//         document.getElementById("stock1_kegs").innerHTML = 3;
-
-//         counter++;
-//     });
-    
-// }
 
 
 
@@ -216,6 +193,34 @@ function msToTime(s) {
   
     return hrs + ':' + mins + ':' + secs;
   }
+
+  function updateStorage(barStats){
+
+    let beerTypes = barStats.taps;
+    //Dette sortere hver tap efter hvor meget øl de har tilbage (lavest først i arrayet)
+    beerTypes.sort(function(a, b){return a.level - b.level});
+
+    let lowestLevels = beerTypes.slice(0, 3);
+
+   
+
+    for (let i = 0; i < lowestLevels.length; i++) {
+        
+        let nameElementId = "stock" + i + "_name";
+        let levelElementId = "stock" + i + "_level";
+        let kegElementId = "stock" + i + "_kegs";
+        let imgElementId = "stock" + i + "_img";
+
+        let imgSrc = "/img/" + lowestLevels[i].beer + ".png";
+        document.getElementById(imgElementId).src = imgSrc;
+        document.getElementById(nameElementId).innerHTML = lowestLevels[i].beer;
+        document.getElementById(levelElementId).innerHTML = lowestLevels[i].level;
+        document.getElementById(kegElementId).innerHTML = 3;
+
+        
+    }
+   
+}
 
 //   function updateTime(barStats){
 //       let hourHand = document.getElementById("hourHand");
