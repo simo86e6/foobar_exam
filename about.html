@@ -51,33 +51,57 @@
                     </g>
                     <circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
                 </svg>
-                <p>01:01:01</p>
+
+
+                <p id="countdown"></p>
                 <h3>til lukketid</h3>
             </div>
 
             <div id="ready_orders">
-                <h2>Din bestilling er klar!</h2>
+
+                <h2>Bestillinger</h2>
+                
+                
+                <p>I kø</p>
+                <div id="order_queue">
+                    <!-- Her kommer P tags ind fra JS -->
+                </div>
+
+
+                <p>Vi arbejder nu på</p>
+                <div id="order_in_progress">
+                    <!-- Her kommer P tags ind fra JS -->
+                </div>
+
                 <p>Hent din bajer og sluk tørsten...</p>
-                <p id="order_number"></p>
+                <div id="order_finished">
+                    <!-- Her kommer P tags ind fra JS -->
+                </div>
 
-                <p>Seneste</p>
-                <p id="latest_order"></p>
             </div>
 
-            <div id="bestsellers">
-                <div id="second">
-                    <img id="beer_2">
-                    <p>2</p>
+            <!-- <div id="storage"> 
+                <div id="stock1">
+                    <img id="stock1_img" src="/img/Row 26.jpg">
+                    <p id="stock1_name"></p>
+                    <p id="stock1_level"></p>
+                    <p id="stock1_kegs"></p>
                 </div>
-                <div id="first">
-                    <img id="beer_1">
-                    <p>1</p>
+
+                <div id="stock2">
+                    <img id="stock2_img" src="/img/Row 26.jpg">
+                    <p id="stock2_name"></p>
+                    <p id="stock2_level"></p>
+                    <p id="stock2_kegs"></p>
                 </div>
-                <div id="third">
-                    <img id="beer_3">
-                    <p>3</p>
+
+                <div id="stock3">
+                    <img id="stock3_img" src="/img/Row 26.jpg">
+                    <p id="stock3_name"></p>
+                    <p id="stock3_level"></p>
+                    <p id="stock3_kegs"></p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section id="web_bottom">
@@ -86,18 +110,18 @@
                     <h2>Bestillinger i kø...</h2>
                     <p id="queue_number"></p>
                 </div>
-                <img src="" id="queue_beer">
+            <div id="beer_pictures">
+
+            </div>
             </div>
 
             <div id="bartenders">
-                <img src="" id="bartender">
-                <div id="bartender_text">
-                    <h2></h2>
-                    <p></p>
-                </div>
+                
+                
             </div>
         </section>
 
     </main>
+    <script type="module" src="/main.js"></script>
 </body>
 </html>
