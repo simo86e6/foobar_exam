@@ -13,50 +13,36 @@
     </header>
 
     <main>
+        <div class="row">
         <section id="web_top">
+            <div class="col-sm">
             <div id="clock">
-                <svg width="200" height="200">
 
-                    <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-                        <feOffset in="blur" dx="2.5" dy="2.5"/>
-                    </filter>
-                
-                    <g>
-                        <circle id="shadow" style="fill:rgba(0,0,0,0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle>
-                        <circle id="circle" style="stroke: #FFF; stroke-width: 12px; fill:#20B7AF" cx="100" cy="100" r="80"></circle>
-                    </g>
-                    <g>
-                        <line x1="100" y1="100" x2="100" y2="55" transform="rotate(80 100 100)" style="stroke-width: 3px; stroke: #fffbf9;" id="hourhand">
-                            <animatetransform attributeName="transform"
-                                              attributeType="XML"
-                                              type="rotate"
-                                              dur="43200s"
-                                              repeatCount="indefinite"/>
-                        </line>
-                        <line x1="100" y1="100" x2="100" y2="40" style="stroke-width: 4px; stroke: #fdfdfd;" id="minutehand">
-                            <animatetransform attributeName="transform"
-                                              attributeType="XML"
-                                              type="rotate"
-                                              dur="3600s"
-                                              repeatCount="indefinite"/>
-                        </line>
-                        <line x1="100" y1="100" x2="100" y2="30" style="stroke-width: 2px; stroke: #C1EFED;" id="secondhand">
-                            <animatetransform attributeName="transform"
-                                              attributeType="XML"
-                                              type="rotate"
-                                              dur="60s"
-                                              repeatCount="indefinite"/>
-                        </line>
-                    </g>
-                    <circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
-                </svg>
+                <div class="clock">
+
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+            
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+            
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+            
+                </div>
+            
 
 
                 <p id="countdown"></p>
                 <h3>til lukketid</h3>
             </div>
+        </div>
+            
 
+            <div class="col-sm">
             <div id="ready_orders">
 
                 <h2>Bestillinger</h2>
@@ -77,10 +63,11 @@
                 <div id="order_finished">
                     <!-- Her kommer P tags ind fra JS -->
                 </div>
-
+            </div>
             </div>
 
-            <!-- <div id="storage"> 
+ <div class="col-sm">
+            <div id="storage"> 
                 <div id="stock1">
                     <img id="stock1_img" src="/img/Row 26.jpg">
                     <p id="stock1_name"></p>
@@ -101,25 +88,32 @@
                     <p id="stock3_level"></p>
                     <p id="stock3_kegs"></p>
                 </div>
-            </div> -->
+            </div>
+            </div>
         </section>
-
+    </div>
+    <div class="row">
         <section id="web_bottom">
+            <div class="col-sm1">
             <div id="queue">
                 <div id="queue_text">
                     <h2>Bestillinger i kø...</h2>
                     <p id="queue_number"></p>
                 </div>
+            
             <div id="beer_pictures">
+            </div>
 
             </div>
             </div>
-
+            <div class="col-sm2">
             <div id="bartenders">
                 
-                
             </div>
+        </div>
+                
         </section>
+        </div>
 
     </main>
     <script type="module" src="/main.js"></script>
