@@ -5,6 +5,13 @@ body {
   // position: fixed;
 }
 
+#form_forside {
+  background-image: url(/img/form_frontpage.jpg);
+
+  /* background-size: cover; */
+  // position: fixed;
+}
+
 .beer_picture {
   height: 15vh;
   margin-top: 10px;
@@ -23,7 +30,8 @@ body {
   background-size: cover;
   border: 4px solid #bf8b2a;
   border-radius: 50%;
-  box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029, inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
+  box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029,
+    inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
 }
 
 .clock:before {
