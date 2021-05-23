@@ -31,7 +31,7 @@ body {
   background-image: url(/img/dark_background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   background-attachment: fixed;
 }
 
@@ -44,7 +44,7 @@ nav {
 #top_nav {
   width: 100vw;
   justify-content: space-around;
-  background-color: var(--yellow);
+  background-color: var(--gold);
   display: flex;
   flex-direction: row;
 }
@@ -59,8 +59,12 @@ nav {
   align-items: center;
 }
 
+i.fa.fa-shopping-basket {
+  align-self: center;
+}
+
 footer {
-  background-color: var(--yellow);
+  background-color: var(--gold);
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -70,6 +74,20 @@ footer {
   justify-content: space-around;
 }
 
+.fa {
+  padding: 1vh;
+}
+
+::before {
+  color: white;
+  font-size: 5vh;
+}
+
+#some,
+#contact {
+  align-self: center;
+}
+
 //-----------FONTS----------------//
 
 #logo {
@@ -77,6 +95,7 @@ footer {
   font-weight: 900;
   font-style: bold;
   color: white;
+  font-size: 1.5rem;
 }
 
 h1 {
@@ -119,6 +138,13 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+#form_forside #top_nav {
+  background-color: unset;
+  justify-content: space-between;
+  padding: 2vh;
+  width: 93vw;
 }
 
 #content_flex {
@@ -187,4 +213,70 @@ p {
 
 #beer_box:first-of-type {
   margin-top: 20vh;
+}
+
+//----------BEKRAEFTELSE-------------//
+#bekraeftelse #top_nav {
+  background-color: unset;
+  justify-content: space-between;
+  padding: 2vh;
+  width: 93vw;
+}
+
+#bekraeftelse {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+
+#bekraeftelse h1 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+  color: var(--yellow);
+}
+
+#bekraeftelse h2 {
+  text-align: center;
+  font-family: var(--handwritten_font);
+  color: white;
+  margin-top: -4vh;
+}
+
+#bekraeftelse h3 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  color: var(--yellow);
+  font-size: 3rem;
+  line-height: 0;
+}
+
+#bekraeftelse p {
+  text-align: center;
+  font-family: var(--handwritten_font);
+  font-size: 0.9rem;
+}
+
+#bekraeftelse h4 {
+  text-align: center;
+  font-size: 0.5rem;
+  margin-top: 11vh;
+}
+
+#bekraeftelse h5 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  color: white;
+  line-height: 0;
+  margin-bottom: -1.5vh;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+#bekraeftelse button {
+  padding: 2vh 4vh;
 }
