@@ -5,13 +5,80 @@
   --gold: #bf8b2a;
 }
 
-#form_forside {
-  background-image: url(/img/form_frontpage.jpg);
-  //   background-size: fill;
-  //   position: fixed;
+//-----------Generel----------------//
+button {
+  cursor: pointer;
+  height: 4vh;
+  border-radius: 24px;
+  border: solid;
+  border-color: var(--yellow);
+  background: transparent;
+  color: white;
+  font-family: "marydale";
+  font-weight: 900;
+  font-size: 1rem;
+  align-self: center;
+  line-height: 0;
+}
+
+#bottom_btn {
+  margin-bottom: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-image: url(/img/dark_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#top_nav {
+  width: 100vw;
+  justify-content: space-around;
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: row;
+}
+
+#nav_icon {
+  width: 10vw;
+}
+
+#tilbage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer {
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
 }
 
 //-----------FONTS----------------//
+
+#logo {
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: bold;
+  color: white;
+}
+
 h1 {
   font-family: var(--sansserif_font);
   font-weight: 700;
@@ -26,7 +93,34 @@ h2 {
   color: var(--yellow);
 }
 
+h3 {
+  font-family: var(--handwritten_font);
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+h4 {
+  font-family: var(--sansserif_font);
+  font-style: bold;
+  color: white;
+}
+
+p {
+  font-family: var(--sansserif_font);
+  font-style: normal;
+  color: white;
+}
+
 //----------FRONTPAGE-----------------//
+
+#form_forside {
+  background-image: url(/img/form_frontpage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 #content_flex {
   display: flex;
   justify-content: center;
@@ -63,4 +157,34 @@ h2 {
   font-weight: 900;
   font-size: 1rem;
   margin-top: 24vh;
+}
+
+//----------MENU-----------------//
+
+#beer_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10vh;
+}
+
+#beer {
+  height: 25vh;
+}
+
+#beer_btns {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 2vh;
+}
+
+#btns_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#beer_box:first-of-type {
+  margin-top: 20vh;
 }
