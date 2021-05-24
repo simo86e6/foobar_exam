@@ -1,3 +1,9 @@
+@use 'partials/bekraeftelse';
+@use 'partials/betaling';
+@use 'partials/forside';
+@use 'partials/kurv';
+@use 'partials/menu';
+
 :root {
   --handwritten_font: marydale, sans-serif;
   --sansserif_font: raleway, sans-serif;
@@ -131,152 +137,168 @@ p {
   color: white;
 }
 
-//----------FRONTPAGE-----------------//
-
-#form_forside {
-  background-image: url(/img/form_frontpage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-#form_forside #top_nav {
-  background-color: unset;
-  justify-content: space-between;
-  padding: 2vh;
-  width: 93vw;
-}
-
-#content_flex {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 15vh;
-}
-
-#content_flex h1,
-#content_flex h2,
-#content_flex #btn {
-  align-self: center;
-}
-
-#content_flex h1 {
-  line-height: 0vw;
-  font-size: 4rem;
-}
-
-#content_flex h2 {
-  color: white;
-  line-height: 0vw;
-  font-size: 2rem;
-}
-
-#btn {
-  padding-left: 9vh;
-  padding-right: 9vh;
-  border-radius: 24px;
-  border: solid;
-  border-color: var(--yellow);
-  background: transparent;
-  color: white;
-  font-family: "marydale";
-  font-weight: 900;
-  font-size: 1rem;
-  margin-top: 24vh;
-}
-
-//----------MENU-----------------//
-
-#beer_box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 10vh;
-}
-
-#beer {
-  height: 25vh;
-}
-
-#beer_btns {
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  padding-bottom: 2vh;
-}
-
-#btns_container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#beer_box:first-of-type {
-  margin-top: 20vh;
-}
-
-//----------BEKRAEFTELSE-------------//
-#bekraeftelse #top_nav {
-  background-color: unset;
-  justify-content: space-between;
-  padding: 2vh;
-  width: 93vw;
-}
-
-#bekraeftelse {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 7vh;
-}
-
-#bekraeftelse h1 {
-  text-align: center;
-  font-family: var(--sansserif_font);
-  font-weight: 900;
-  font-style: normal;
-  font-size: 3rem;
+label {
   color: var(--yellow);
-}
-
-#bekraeftelse h2 {
-  text-align: center;
-  font-family: var(--handwritten_font);
-  color: white;
-  margin-top: -4vh;
-}
-
-#bekraeftelse h3 {
-  text-align: center;
   font-family: var(--sansserif_font);
-  color: var(--yellow);
-  font-size: 3rem;
-  line-height: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-#bekraeftelse p {
-  text-align: center;
-  font-family: var(--handwritten_font);
-  font-size: 0.9rem;
-}
+// //----------FRONTPAGE-----------------//
 
-#bekraeftelse h4 {
-  text-align: center;
-  font-size: 0.5rem;
-  margin-top: 11vh;
-}
+// #form_forside {
+//   background-image: url(/img/form_frontpage.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100vh;
+// }
 
-#bekraeftelse h5 {
-  text-align: center;
-  font-family: var(--sansserif_font);
-  color: white;
-  line-height: 0;
-  margin-bottom: -1.5vh;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.5rem;
-}
+// #form_forside #top_nav {
+//   background-color: unset;
+//   justify-content: space-between;
+//   padding: 2vh;
+//   width: 93vw;
+// }
 
-#bekraeftelse button {
-  padding: 2vh 4vh;
-}
+// #content_flex {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin-top: 15vh;
+// }
+
+// #content_flex h1,
+// #content_flex h2,
+// #content_flex #btn {
+//   align-self: center;
+// }
+
+// #content_flex h1 {
+//   line-height: 0vw;
+//   font-size: 4rem;
+// }
+
+// #content_flex h2 {
+//   color: white;
+//   line-height: 0vw;
+//   font-size: 2rem;
+// }
+
+// #btn {
+//   padding-left: 9vh;
+//   padding-right: 9vh;
+//   border-radius: 24px;
+//   border: solid;
+//   border-color: var(--yellow);
+//   background: transparent;
+//   color: white;
+//   font-family: "marydale";
+//   font-weight: 900;
+//   font-size: 1rem;
+//   margin-top: 24vh;
+// }
+
+// //----------MENU-----------------//
+
+// #beer_box {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   margin-bottom: 10vh;
+// }
+
+// #beer {
+//   height: 25vh;
+// }
+
+// #beer_btns {
+//   display: flex;
+//   justify-content: end;
+//   flex-direction: column;
+//   padding-bottom: 2vh;
+// }
+
+// #btns_container {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+// #beer_box:first-of-type {
+//   margin-top: 20vh;
+// }
+
+// //----------BEKRAEFTELSE-------------//
+// #bekraeftelse #top_nav {
+//   background-color: unset;
+//   justify-content: space-between;
+//   padding: 2vh;
+//   width: 93vw;
+// }
+
+// #bekraeftelse {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin-top: 7vh;
+// }
+
+// #bekraeftelse h1 {
+//   text-align: center;
+//   font-family: var(--sansserif_font);
+//   font-weight: 900;
+//   font-style: normal;
+//   font-size: 3rem;
+//   color: var(--yellow);
+// }
+
+// #bekraeftelse h2 {
+//   text-align: center;
+//   font-family: var(--handwritten_font);
+//   color: white;
+//   margin-top: -4vh;
+// }
+
+// #bekraeftelse h3 {
+//   text-align: center;
+//   font-family: var(--sansserif_font);
+//   color: var(--yellow);
+//   font-size: 3rem;
+//   line-height: 0;
+// }
+
+// #bekraeftelse p {
+//   text-align: center;
+//   font-family: var(--handwritten_font);
+//   font-size: 0.9rem;
+// }
+
+// #bekraeftelse h4 {
+//   text-align: center;
+//   font-size: 0.5rem;
+//   margin-top: 11vh;
+// }
+
+// #bekraeftelse h5 {
+//   text-align: center;
+//   font-family: var(--sansserif_font);
+//   color: white;
+//   line-height: 0;
+//   margin-bottom: -1.5vh;
+//   font-weight: 300;
+//   font-style: normal;
+//   font-size: 1.5rem;
+// }
+
+// #bekraeftelse button {
+//   padding: 2vh 4vh;
+// }
+
+// /******Betaling******/
+
+// #kort_oplysninger {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin-top: 30vh;
+// }

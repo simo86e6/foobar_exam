@@ -1,0 +1,29 @@
+//----------MENU-----------------//
+
+#beer_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10vh;
+}
+
+#beer {
+  height: 25vh;
+}
+
+#beer_btns {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 2vh;
+}
+
+#btns_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#beer_box:first-of-type {
+  margin-top: 20vh;
+}

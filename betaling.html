@@ -22,37 +22,71 @@
     </nav>
 
     <container id="kort_oplysninger">
-        <div id="kortnummer">
-            <label for="number" class="labels">Kortnummer</label>
-            <input type="text" id="number" maxlength="19" minlength="19" placeholder="1256 3478 9012 9012" pattern=".{19,19}" name="card" required="">
-        </div>
-
-        <div id="kortnavn">
-            <label for="full_name" class="labels">Kortenehavers navn</label>
-            <input type="text" id="full_name" placeholder="Jonas Lind" pattern="(?:[a-z]|[A-Z]).{0,30}\s(?:[a-z]|[A-Z]).{0,30}" name="card" required="">
-        </div>
         
-        <div id="kort_dato_cvc">
-            <div id="column_right">
-            <label for="expiration_date" class="labels">Udløbsdato</label>
-                <div id="content_box">
-                    <input type="number" max="12" min="01" id="month" placeholder="XX" name="card" required="">
-                    <input type="text" maxlength="2" minlength="2" id="year" placeholder="XX" name="card" pattern="^[0-9]{2}$" required="">
+        <section id="card" class="card hide">
+            <form class="credit_card">
+              <article class="credit_container">
+                  
+                <!-- <article class="card_ani"></article> -->
+                <fieldset class="card_wrapper">
+                <div id="card_details">
+                    <label for="full_name" class="labels">Navn på kort</label>
+                    <input type="text" id="full_name" placeholder="JOHN SMITH" pattern="(?:[a-z]|[A-Z]).{0,30}\s(?:[a-z]|[A-Z]).{0,30}" name="card" required />
+                    <!-- <p class="invalid_text star hide">*</p> -->
+                  </div>
+                  <div id="card_details">
+                    <label for="number" class="labels">Kortnummer</label>
+                    <input type="text" id="number" maxlength="19" minlength="19" placeholder="1234 5678 9012 3456" pattern=".{19,19}" name="card" required />
+                    <!-- <p class="invalid_text star hide">*</p> -->
+                  </div>
+                  <div class="small_inputs">
+                    <div class="expire">
+                        <div id="card_details">
+                        <label for="month" class="labels">Måned</label>
+                        <input type="number" max="12" min="01" id="month" placeholder="XX" name="card" required />
+                        <!-- <p class="invalid_text star hide">*</p> -->
+                      </div>
+                      <div id="card_details">
+                        <label for="year" class="labels">År</label>
+                        <input type="text" maxlength="2" minlength="2" id="year" placeholder="XX" name="card" pattern="^[0-9]{2}$" required />
+                        <!-- <p class="invalid_text star hide">*</p> -->
+                      </div>
+                    </div>
+                    <div id="card_details">
+                      <label for="secure" class="labels">CVC</label>
+                      <input type="text" maxlength="3" minlength="3" id="secure" placeholder="XXX" name="card" pattern=".{3,3}" required />
+                      <!-- <p class="invalid_text star hide">*</p> -->
+                    </div>
+                  </div>
+                 
+                </fieldset>
+              </article>
+              <!-- <div class="credit_invalid">
+                <p class="invalid_creditcard invalid_text hide">You need to fill out 16 digits for the credit card</p>
+                <p class="invalid_month invalid_text hide">You need to enter two digits for the month</p>
+                <p class="invalid_year invalid_text hide">You need to enter two digits for the year and the year has to be bigger than 20</p>
+                <p class="invalid_cvc invalid_text hide">You need to enter the security code on the back of your card (3 digits).</p>
+                <p class="invalid_name invalid_text hide">Enter at least a first and a last name</p>
+              </div> -->
+               
+           
+                <div id="andet_betaling">
+
+                    <h2>Eller betal med...</h2>
+    
+                    <div id="betalingsmetoder">
+    
+                        <img src="/img/mobilepay_icon.svg" alt="mobilepay">
+    
+                        <img src="/img/applepay_icon.svg" alt="applepay">
+    
+                    </div>
+    
+                    <button onclick="window.location.href=('bekraeftelse.html')">KØB</button>
+    
                 </div>
-            </div>
-            <div id="column_left"> 
-                <label for="secure" class="labels">CVC</label>
-                <input type="text" maxlength="3" minlength="3" id="secure" placeholder="XXX" name="card" pattern=".{3,3}" required="">
-            </div> 
-            <div id="andet_betaling">
-                <h2>Eller betal med...</h2>
-                <div id="betalingsmetoder">
-                    <img src="#" alt="mobilepay">
-                    <img src="#" alt="applepay">
-                </div>
-                <button onclick="window.location.href=('bekraeftelse.html')">KØB</button>
-            </div>
-        </div>
+            </form>
+            </section>
     </container>
 
     <footer>

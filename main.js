@@ -211,7 +211,7 @@ function msToTime(s) {
         let kegElementId = "stock" + i + "_kegs";
         let imgElementId = "stock" + i + "_img";
 
-        let imgSrc = "/img/" + lowestLevels[i].beer + ".png";
+        let imgSrc = "/img/kegs/" + lowestLevels[i].beer + ".png";
         document.getElementById(imgElementId).src = imgSrc;
         document.getElementById(nameElementId).innerHTML = lowestLevels[i].beer;
         document.getElementById(levelElementId).innerHTML = lowestLevels[i].level;

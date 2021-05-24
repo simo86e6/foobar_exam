@@ -1,0 +1,65 @@
+//----------BEKRAEFTELSE-------------//
+#bekraeftelse #top_nav {
+  background-color: unset;
+  justify-content: space-between;
+  padding: 2vh;
+  width: 93vw;
+}
+
+#bekraeftelse {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+
+#bekraeftelse h1 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+  color: var(--yellow);
+}
+
+#bekraeftelse h2 {
+  text-align: center;
+  font-family: var(--handwritten_font);
+  color: white;
+  margin-top: -4vh;
+}
+
+#bekraeftelse h3 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  color: var(--yellow);
+  font-size: 3rem;
+  line-height: 0;
+}
+
+#bekraeftelse p {
+  text-align: center;
+  font-family: var(--handwritten_font);
+  font-size: 0.9rem;
+}
+
+#bekraeftelse h4 {
+  text-align: center;
+  font-size: 0.5rem;
+  margin-top: 11vh;
+}
+
+#bekraeftelse h5 {
+  text-align: center;
+  font-family: var(--sansserif_font);
+  color: white;
+  line-height: 0;
+  margin-bottom: -1.5vh;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+#bekraeftelse button {
+  padding: 2vh 4vh;
+}

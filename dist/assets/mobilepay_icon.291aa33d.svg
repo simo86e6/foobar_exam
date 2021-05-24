@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257 111">
+  <g id="mobilepay_icon">
+    <rect x="25.34" y="13.43" width="42.15" height="84.04" rx="8.31" transform="translate(-17.56 21.74) rotate(-22.28)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+    <path d="M83.15,25c-29-1-43,18-43,18l11,28,40-27Z" fill="#dfdde6"/>
+    <path d="M51.15,43A54.16,54.16,0,0,1,98,43V71c-26.15-12-45.85,0-45.85,0Z" fill="#fff"/>
+    <text transform="translate(103.79 62.13)" font-size="29" fill="#fff" font-family="Roboto-Bold, Roboto" font-weight="700">Mobile<tspan x="89.18" y="0" letter-spacing="-0.01em">P</tspan><tspan x="107.73" y="0">ay</tspan></text>
+  </g>
+</svg>
