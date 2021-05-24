@@ -1,0 +1,23 @@
+#kurv .cart_summary {
+  margin-top: 20vh;
+  text-align: center;
+  margin-bottom: 20vh;
+}
+
+#kurv #btns_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#kurv #btns_container button {
+  min-width: 12vw;
+}
+
+#kurv button {
+  min-width: 25vw;
+}
+
+#kurv #beer {
+  align-self: center;
+}
