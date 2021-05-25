@@ -5,9 +5,8 @@
 }
 
 #kurv #btns_container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
 }
 
 #kurv #btns_container button {
@@ -22,19 +21,14 @@
   align-self: center;
 }
 
-#beer_box {
-  display: unset;
-  flex-direction: unset;
-  justify-content: unset;
-  margin-bottom: unset;
+#kurv #beer_box {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
 }
 
-#beer_box {
+#kurv #beer_info {
   display: grid;
-  /* flex-direction: row; */
-  /* justify-content: space-around; */
-  /* margin-bottom: 10vh; */
-  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 //------------------------------------------//
