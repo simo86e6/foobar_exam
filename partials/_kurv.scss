@@ -22,6 +22,21 @@
   align-self: center;
 }
 
+#beer_box {
+  display: unset;
+  flex-direction: unset;
+  justify-content: unset;
+  margin-bottom: unset;
+}
+
+#beer_box {
+  display: grid;
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  /* margin-bottom: 10vh; */
+  grid-template-columns: 0.5fr 1.5fr;
+}
+
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//

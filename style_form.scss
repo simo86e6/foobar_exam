@@ -201,10 +201,8 @@ label {
 // //----------MENU-----------------//
 
 // #beer_box {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   margin-bottom: 10vh;
+//     display: grid;
+//     grid-template-columns: 0.5fr 1.5fr;
 // }
 
 // #beer {
