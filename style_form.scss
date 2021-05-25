@@ -45,10 +45,10 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 #top_nav {
-  width: 100vw;
   justify-content: space-around;
   background-color: var(--gold);
   display: flex;
@@ -74,7 +74,7 @@ footer {
   display: flex;
   flex-direction: row;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   left: 0;
   justify-content: space-around;
@@ -302,3 +302,7 @@ label {
 //   flex-direction: column;
 //   margin-top: 30vh;
 // }
+
+//------------------------------------------//
+//                 MEDIAQUIRES             //
+//----------------------------------------//

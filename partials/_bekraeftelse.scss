@@ -63,3 +63,64 @@
 #bekraeftelse button {
   padding: 2vh 4vh;
 }
+
+//------------------------------------------//
+//                 MEDIAQUIRES             //
+//----------------------------------------//
+
+//mobile M
+@media screen and (min-width: 375px) {
+}
+
+//mobile L
+@media screen and (min-width: 425px) {
+  #bekraeftelse ::before {
+    color: white;
+    font-size: 5vh;
+  }
+
+  #bekraeftelse h4 {
+    font-size: 0.8rem;
+  }
+}
+
+//tablet
+@media screen and (min-width: 768px) {
+}
+
+//laptop
+@media screen and (min-width: 1024px) {
+}
+
+//laptop L
+@media screen and (min-width: 1440px) {
+  #bekraeftelse h1 {
+    font-size: 6rem;
+    line-height: 4vh;
+    margin-top: 5vh;
+  }
+
+  #bekraeftelse h2 {
+    font-size: 2rem;
+  }
+
+  #bekraeftelse h3 {
+    font-size: 4rem;
+  }
+
+  #bekraeftelse h4 {
+    font-size: 1rem;
+  }
+
+  #bekraeftelse h5 {
+    font-size: 1.5rem;
+  }
+
+  #bekraeftelse p {
+    font-size: 1.3rem;
+  }
+}
+
+//4k
+@media screen and (min-width: 2560px) {
+}
