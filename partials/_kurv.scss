@@ -26,9 +26,18 @@
   grid-template-columns: 0.5fr 1.5fr;
 }
 
-#kurv #beer_info {
+#kurv_page #beer_info {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#kurv_page h2 {
+  line-height: 0;
+}
+
+#kurv_page #h3 {
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
 //------------------------------------------//
