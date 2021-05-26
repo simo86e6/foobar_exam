@@ -22,14 +22,15 @@
     </nav>
     
 
-     <container id="menu">
-
+     <div id="menu">
+       
+        <template class="product_temp">       
         <div id="beer_box">
-            <img src="/img/glass/fairytale_glass.png" alt="beer" id="beer">
+            <img class="beer_glass show_text" src="" alt="beer_picture" id="beer">
             <div id="beer_info">
-                <h2>Fairytale Ale</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
+                <h2 class="beer_name"></h2>
+                <h3 class="beer_price"></h3>
+                <p class="alcohol_procent"></p>
             </div>
             <div id="beer_btns">
                 <div id="btns_container">
@@ -38,174 +39,48 @@
                     <button>+</button>
                 </div>
                 <button>Læg i kurv</button>
-            </div>
+            </div> 
         </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/githop_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>GitHop</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+        <div>
+            <div class="more_body hide">
+                <!-- <img src="" alt="" class="beer_label" /> -->
+                <div class="product_txt">
+                  <h3 class="head2">AROMA</h3>
+                  <p class="beer_aroma"></p>
+                  <h3 class="head2">APPEARANCE</h3>
+                  <p class="beer_appearance"></p>
+                  <h3 class="head2">MOUTHFEEL</h3>
+                  <p class="beer_mouth_feel"></p>
                 </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/hollabeck_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Hollaback</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+                <div class="product_txt">
+                  <h3 class="head2">FLAVOUR</h3>
+                  <p class="beer_flavour"></p>
+                  <h3 class="head2">OVERALL</h3>
+                  <p class="beer_overall"></p>
                 </div>
-                <button>Læg i kurv</button>
-            </div>
+              </div>
         </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/hoppily_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Hoppily Ever After</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/mowintime_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Mowintime</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/row_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Row 26</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/ruined_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Ruined Childhood</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/sleighride_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Sleighride</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/steampunk_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Steampunk</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="/img/glass/elhefe_glass.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>El Hefe</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
+            </template>
+            
+        <section class="beer_container">
+            <!-- APPEND LIST -->
+          </section>
+        
 
         <div id="bottom_btn">
             <button onclick="window.location.href=('kurv.html')">GÅ TIL KURV</button>
         </div>
 
-     </container>
+    </div>
+
+     
 
      <footer>
          <div id="contact">
             <i class="fa fa-envelope"></i>
             <i class="fa fa-phone"></i>
          </div>
-         <h1 id="logo">FOOBAR</h1>
+         <h1 id="logo1">FOOBAR</h1>
          <div id="some">
             <i class="fa fa-facebook-official"></i>
             <i class="fa fa-instagram"></i>
