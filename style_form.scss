@@ -49,10 +49,10 @@ nav {
 }
 
 #top_nav {
-  justify-content: space-around;
-  background-color: var(--gold);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--gold);
 }
 
 #nav_icon {

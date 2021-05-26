@@ -24,20 +24,37 @@
 #kurv #beer_box {
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
+  justify-items: center;
 }
 
 #kurv_page #beer_info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 #kurv_page h2 {
   line-height: 0;
+  font-size: 1.2rem;
+  margin-top: 3.5vh;
 }
 
-#kurv_page #h3 {
+#kurv_page #left_column h2 {
+  text-align: start;
+}
+
+#kurv_page p:nth-child(2) {
+  text-align: start;
+}
+
+#kurv_page #beer_btns p {
+  text-align: center;
+}
+
+#kurv_page h3 {
+  line-height: 0;
   font-size: 0.8rem;
-  line-height: 1;
+  text-align: start;
 }
 
 //------------------------------------------//
@@ -54,6 +71,10 @@
 
 //tablet
 @media screen and (min-width: 768px) {
+  #kurv_page h2 {
+    line-height: 0.5;
+    font-size: 2.2rem;
+  }
 }
 
 //laptop
