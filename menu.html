@@ -13,6 +13,7 @@
         <div id="top_nav">
             <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon">
             <h1 id="logo">FOOBAR</h1>
+            <p id="amount_in_basket"></p>
             <i class='fa fa-shopping-basket'></i>
         </div>
         <div id="tilbage">
@@ -34,14 +35,15 @@
             </div>
             <div id="beer_btns">
                 <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+                    <button class="counter_minus">-</button>
+                    <p class="counter_display"></p>
+                    <button class="counter_plus">+</button>
                 </div>
                 <button>Læg i kurv</button>
             </div> 
         </div>
         <div>
+            <button class="collapsible">show content</button>
             <div class="more_body hide">
                 <!-- <img src="" alt="" class="beer_label" /> -->
                 <div class="product_txt">
@@ -59,6 +61,7 @@
                   <p class="beer_overall"></p>
                 </div>
               </div>
+            
         </div>
             </template>
             
