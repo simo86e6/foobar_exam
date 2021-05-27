@@ -1,6 +1,6 @@
 "use strict";
 import './style_form.scss'
-import './partials/_menu.scss'
+
 
 getData();
 

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>form_menu</title>
-<script type="module" crossorigin src="./assets/menu.6be0f4e5.js"></script>
-  <link rel="stylesheet" href="./assets/style_form.b5cf3c81.css">
+<script type="module" crossorigin src="./assets/menu.a512c27f.js"></script>
+  <link rel="modulepreload" href="./assets/form.e260c0c7.js">
+  <link rel="stylesheet" href="./assets/form.802ccd87.css">
 </head>
 <body>
     <nav>
@@ -24,14 +25,15 @@
     </nav>
     
 
-     <container id="menu">
-
+     <div id="menu">
+       
+        <template class="product_temp">       
         <div id="beer_box">
-            <img src="./assets/fairytale_glass.b22d6219.png" alt="beer" id="beer">
+            <img class="beer_glass show_text" src="#" alt="beer_picture" id="beer">
             <div id="beer_info">
-                <h2>Fairytale Ale</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
+                <h2 class="beer_name"></h2>
+                <h3 class="beer_price"></h3>
+                <p class="alcohol_procent"></p>
             </div>
             <div id="beer_btns">
                 <div id="btns_container">
@@ -40,174 +42,48 @@
                     <button>+</button>
                 </div>
                 <button>Læg i kurv</button>
-            </div>
+            </div> 
         </div>
-
-        <div id="beer_box">
-            <img src="./assets/githop_glass.e65566f3.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>GitHop</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+        <div>
+            <div class="more_body hide">
+                <!-- <img src="" alt="" class="beer_label" /> -->
+                <div class="product_txt">
+                  <h3 class="head2">AROMA</h3>
+                  <p class="beer_aroma"></p>
+                  <h3 class="head2">APPEARANCE</h3>
+                  <p class="beer_appearance"></p>
+                  <h3 class="head2">MOUTHFEEL</h3>
+                  <p class="beer_mouth_feel"></p>
                 </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/hollabeck_glass.78a3ef2b.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Hollaback</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+                <div class="product_txt">
+                  <h3 class="head2">FLAVOUR</h3>
+                  <p class="beer_flavour"></p>
+                  <h3 class="head2">OVERALL</h3>
+                  <p class="beer_overall"></p>
                 </div>
-                <button>Læg i kurv</button>
-            </div>
+              </div>
         </div>
-
-        <div id="beer_box">
-            <img src="./assets/hoppily_glass.c6de2b94.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Hoppily Ever After</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/mowintime_glass.92159e3d.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Mowintime</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/row_glass.91979cd2.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Row 26</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/ruined_glass.938aec34.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Ruined Childhood</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/sleighride_glass.6377cab5.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Sleighride</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/steampunk_glass.601fb39c.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>Steampunk</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
-
-        <div id="beer_box">
-            <img src="./assets/elhefe_glass.42b1033a.png" alt="beer" id="beer">
-            <div id="beer_info">
-                <h2>El Hefe</h2>
-                <h3>29,95 dkk</h3>
-                <p>blah blah blah blah</p>
-            </div>
-            <div id="beer_btns">
-                <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
-                </div>
-                <button>Læg i kurv</button>
-            </div>
-        </div>
+            </template>
+            
+        <section class="beer_container">
+            <!-- APPEND LIST -->
+          </section>
+        
 
         <div id="bottom_btn">
             <button onclick="window.location.href=('kurv.html')">GÅ TIL KURV</button>
         </div>
 
-     </container>
+    </div>
+
+     
 
      <footer>
          <div id="contact">
             <i class="fa fa-envelope"></i>
             <i class="fa fa-phone"></i>
          </div>
-         <h1 id="logo">FOOBAR</h1>
+         <h1 id="logo1">FOOBAR</h1>
          <div id="some">
             <i class="fa fa-facebook-official"></i>
             <i class="fa fa-instagram"></i>
