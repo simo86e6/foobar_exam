@@ -144,6 +144,69 @@ label {
   font-size: 1.2rem;
 }
 
+//------------------------------------------//
+//        GLOBAL NAVBAR MEDIAQUIRES        //
+//----------------------------------------//
+
+//mobile M
+@media screen and (min-width: 375px) {
+  #form_forside ::before,
+  #bekraeftelse ::before,
+  #betaling ::before,
+  #kurv ::before,
+  #menu ::before {
+    font-size: 3.5vh;
+  }
+}
+
+//mobile L
+@media screen and (min-width: 425px) {
+  #form_forside ::before,
+  #bekraeftelse ::before,
+  #betaling ::before,
+  #kurv ::before,
+  #menu ::before {
+    font-size: 5.5vh;
+  }
+
+  img#nav_icon {
+    width: 9.5vw;
+  }
+}
+
+//tablet
+@media screen and (min-width: 768px) {
+  #form_forside ::before,
+  #bekraeftelse ::before,
+  #betaling ::before,
+  #kurv ::before,
+  #menu ::before {
+    font-size: 6.5vh;
+  }
+
+  img#nav_icon {
+    width: 5.5vw;
+  }
+}
+
+//laptop
+@media screen and (min-width: 1024px) {
+  img#nav_icon {
+    width: 4.5vw;
+  }
+}
+
+//laptop L
+@media screen and (min-width: 1440px) {
+  img#nav_icon {
+    width: 4vw;
+  }
+}
+
+//4k
+@media screen and (min-width: 2560px) {
+}
+
 // //----------FRONTPAGE-----------------//
 
 // #form_forside {
