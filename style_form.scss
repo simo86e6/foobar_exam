@@ -59,7 +59,34 @@ nav {
 
 #nav_icon {
   width: 7.5vw;
+  margin-top: 3.8vh;
 }
+
+.fa {
+  cursor: pointer;
+}
+
+//DROPDOWN
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000b2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+//DROPDOWN SLUT
 
 #tilbage {
   display: flex;
@@ -159,6 +186,10 @@ label {
   #menu ::before {
     font-size: 3.5vh;
   }
+
+  #nav_icon {
+    margin-top: 3.4vh;
+  }
 }
 
 //mobile L
@@ -189,12 +220,20 @@ label {
   img#nav_icon {
     width: 6.5vh;
   }
+
+  #nav_icon {
+    margin-top: 1.4vh;
+  }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
   img#nav_icon {
     width: 6.5vh;
+  }
+
+  #nav_icon {
+    margin-top: 1.3vh;
   }
 }
 
