@@ -1,0 +1,25 @@
+// #bartenders {
+//   float: left;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: row;
+//   width: 60vw;
+//   height: 45vh;
+// }
+
+#bartenders img {
+  width: 10vw;
+}
+
+#bartenders div:first-child {
+  display: flex;
+  flex-direction: row;
+}
+
+#bartenders div:nth-child(2) {
+  display: none;
+}
+
+#bartenders div:nth-child(3) {
+  display: none;
+}

@@ -1,0 +1,27 @@
+// #ready_orders {
+//   padding: 1vw;
+// }
+
+#ready_orders h3 {
+  margin-bottom: 3vh;
+  // font-size: 0.8rem;
+}
+
+#ready_orders p {
+  // font-size: 1rem;
+  margin-right: 1vw;
+}
+
+#order_queue,
+#order_in_progress,
+#order_finished {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8vh;
+  /* justify-content: space-between; */
+}
+
+// #order_queue,
+// #order_in_progress {
+//   margin-bottom: 8vh;
+// }

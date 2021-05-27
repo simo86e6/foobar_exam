@@ -1,214 +1,147 @@
+@use 'partials/dashboard-tid';
+@use 'partials/dashboard-bestillinger';
+@use 'partials/dashboard-beholdning';
+@use 'partials/dashboard-ko';
+@use 'partials/dashboard-bartender';
+
+:root {
+  --handwritten_font: marydale, sans-serif;
+  --sansserif_font: raleway, sans-serif;
+  --yellow: #f2c029;
+  --gold: #bf8b2a;
+  --dark_overlay: #000000bb;
+}
+
+#logo {
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: bold;
+  color: white;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: normal;
+  color: var(--yellow);
+  line-height: 0;
+}
+
+h2 {
+  font-family: var(--handwritten_font);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--yellow);
+  line-height: 0;
+  margin-bottom: 8vh;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-family: var(--sansserif_font);
+  font-weight: 600;
+  font-style: normal;
+  color: var(--yellow);
+  line-height: 0;
+  font-size: 0.8rem;
+}
+
+h4 {
+  font-family: var(--sansserif_font);
+  font-style: bold;
+  color: var(--yellow);
+  line-height: 0;
+}
+
+p {
+  font-family: var(--sansserif_font);
+  font-style: normal;
+  color: white;
+  line-height: 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+label {
+  color: var(--yellow);
+  font-family: var(--sansserif_font);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fa-gear::before,
+.fa-cog::before {
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+
+#countdown {
+  color: white;
+  font-family: var(--sansserif_font);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+//*******GENEREL******//
+
 body {
   background-image: url(/img/background.jpg);
-
   background-size: cover;
   // position: fixed;
+  padding: 2vw;
 }
 
-#form_forside {
-  background-image: url(/img/form_frontpage.jpg);
-
-  /* background-size: cover; */
-  // position: fixed;
-}
-
-.beer_picture {
-  height: 15vh;
-  margin-top: 10px;
-  height: 10rem;
-  width: auto;
-  margin-left: 30px;
-}
-
-.clock {
+header {
   display: flex;
-  width: 350px;
-  height: 350px;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  background: url(/img/analog_ur.svg);
-  background-size: cover;
-  border: 4px solid #bf8b2a;
-  border-radius: 50%;
-  box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029,
-    inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
+  margin-bottom: 5vh;
 }
 
-.clock:before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: #747474;
-  border-radius: 50%;
-  z-index: 999;
-}
-
-.clock .hour,
-.clock .min,
-.clock .sec {
-  position: absolute;
-}
-
-.clock .hour,
-.hr {
-  width: 160px;
-  height: 160px;
-}
-
-.clock .min,
-.mn {
-  width: 190px;
-  height: 190px;
-}
-
-.clock .sec,
-.sc {
-  width: 230px;
-  height: 230px;
-}
-
-.hr,
-.mn,
-.sc {
+/* #top,
+#bottom {
   display: flex;
-  justify-content: center;
-  /*align-items: center;*/
-  position: absolute;
-  border-radius: 50%;
+  flex-direction: row;
+} */
+
+#top {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2.5fr;
+  grid-gap: 2vw;
+  margin-bottom: 6vh;
 }
 
-.hr:before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 80px;
-  background: #ffb510;
-  z-index: 9;
-  border-radius: 6px 6px 0 0;
+#bottom {
+  display: grid;
+  grid-template-columns: 2.5fr 3fr;
+  grid-gap: 2vw;
 }
 
-.mn:before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 90px;
-  background: #8b8b8b;
-  z-index: 10;
-  border-radius: 6px 6px 0 0;
+.col-sm,
+.col-sm1,
+.col-sm2 {
+  display: flex;
+  align-items: start;
+  height: 100%;
+  padding: 2vh 1vw;
+  background-color: var(--dark_overlay);
+  border-radius: 25px;
 }
 
-.sc:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 150px;
-  background: #e5e5e5;
-  z-index: 11;
-  border-radius: 6px 6px 0 0;
+.col-sm1,
+.col-sm2 {
+  padding: 2vh 2vw;
 }
 
+#clock,
 #ready_orders,
 #storage,
 #queue,
 #bartenders {
-  border-style: solid;
-  display: inline-block;
-}
-
-.col-sm {
-  float: left;
-  width: 33.33%;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.col-sm1 {
-  float: left;
-  width: 33.33%;
-  text-align: center;
-  position: relative;
-  margin-top: 50px;
-}
-
-.col-sm2 {
-  float: left;
-  width: 66.33%;
-  margin-left: 5px;
-  margin-top: 50px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  display: flex;
-}
-
-#bartenders {
-  float: left;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  width: 60vw;
-  height: 45vh;
-}
-
-#storage {
-  display: flex;
-  flex-direction: row;
-  width: 27vw;
-  height: 40vh;
-}
-
-#ready_orders {
-  display: flex;
-  flex-direction: row;
-  width: 30vw;
-  height: 40vh;
-}
-
-p {
-  color: #ffb510;
-}
-
-#bartenders,
-#clock,
-#ready_orders,
-#storage,
-#queue {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-#beer_pictures {
-  width: 25vw;
-  height: 37vh;
-}
-
-#clock {
-  width: 25vw;
-  height: 40vh;
-  margin-left: 70px;
-  border-style: solid;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.clock {
-  place-self: center;
-  margin-top: 30px;
-}
-
-@media screen and (max-width: 320px) and (min-width: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
+  width: 100%;
+  min-height: 100%;
+  // padding: 1vw;
 }
