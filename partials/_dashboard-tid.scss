@@ -1,0 +1,133 @@
+#clock p {
+  text-align: center;
+}
+
+#clock h3 {
+  font-family: var(--handwritten_font);
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 1rem;
+}
+
+// .clock {
+//   display: flex;
+//   width: 350px;
+//   height: 350px;
+//   justify-content: center;
+//   align-items: center;
+//   background: url(/img/analog_ur.svg);
+//   background-size: cover;
+//   border: 4px solid #bf8b2a;
+//   border-radius: 50%;
+//   box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029,
+//     inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
+// }
+
+// .clock:before {
+//   content: "";
+//   position: absolute;
+//   width: 15px;
+//   height: 15px;
+//   background: #747474;
+//   border-radius: 50%;
+//   z-index: 999;
+// }
+
+// .clock .hour,
+// .clock .min,
+// .clock .sec {
+//   position: absolute;
+// }
+
+// .clock .hour,
+// .hr {
+//   width: 160px;
+//   height: 160px;
+// }
+
+// .clock .min,
+// .mn {
+//   width: 190px;
+//   height: 190px;
+// }
+
+// .clock .sec,
+// .sc {
+//   width: 230px;
+//   height: 230px;
+// }
+
+// .hr,
+// .mn,
+// .sc {
+//   display: flex;
+//   justify-content: center;
+//   /*align-items: center;*/
+//   position: absolute;
+//   border-radius: 50%;
+// }
+
+// .hr:before {
+//   content: "";
+//   position: absolute;
+//   width: 8px;
+//   height: 80px;
+//   background: #ffb510;
+//   z-index: 9;
+//   border-radius: 6px 6px 0 0;
+// }
+
+// .mn:before {
+//   content: "";
+//   position: absolute;
+//   width: 4px;
+//   height: 90px;
+//   background: #8b8b8b;
+//   z-index: 10;
+//   border-radius: 6px 6px 0 0;
+// }
+
+// .sc:before {
+//   content: "";
+//   position: absolute;
+//   width: 2px;
+//   height: 150px;
+//   background: #e5e5e5;
+//   z-index: 11;
+//   border-radius: 6px 6px 0 0;
+// }
+
+// .col-sm {
+//   float: left;
+//   width: 33.33%;
+//   text-align: center;
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .col-sm1 {
+//   float: left;
+//   width: 33.33%;
+//   text-align: center;
+//   position: relative;
+//   margin-top: 50px;
+// }
+
+// .col-sm2 {
+//   float: left;
+//   width: 66.33%;
+//   margin-left: 5px;
+//   margin-top: 50px;
+// }
+
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+//   display: flex;
+// }
+
+// .clock {
+//   place-self: center;
+//   margin-top: 30px;
+// }
