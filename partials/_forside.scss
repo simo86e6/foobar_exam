@@ -66,32 +66,14 @@
 
 //mobile M
 @media screen and (min-width: 375px) {
-  #form_forside ::before {
-    font-size: 3.5vh;
-  }
 }
 
 //mobile L
 @media screen and (min-width: 425px) {
-  #form_forside ::before {
-    font-size: 5.5vh;
-  }
-
-  img#nav_icon {
-    width: 9.5vw;
-  }
 }
 
 //tablet
 @media screen and (min-width: 768px) {
-  #form_forside ::before {
-    font-size: 6.5vh;
-  }
-
-  img#nav_icon {
-    width: 5.5vw;
-  }
-
   #form_forside #content_flex h1 {
     line-height: 0vw;
     font-size: 6rem;
@@ -116,17 +98,10 @@
 
 //laptop
 @media screen and (min-width: 1024px) {
-  img#nav_icon {
-    width: 4.5vw;
-  }
 }
 
 //laptop L
 @media screen and (min-width: 1440px) {
-  img#nav_icon {
-    width: 4vw;
-  }
-
   #form_forside #content_flex h1 {
     font-size: 10rem;
   }

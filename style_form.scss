@@ -53,6 +53,8 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--gold);
+  padding-right: 3vw;
+  padding-left: 3vw;
 }
 
 #nav_icon {
@@ -153,7 +155,7 @@ label {
   #form_forside ::before,
   #bekraeftelse ::before,
   #betaling ::before,
-  #kurv ::before,
+  #kurv_page ::before,
   #menu ::before {
     font-size: 3.5vh;
   }
@@ -164,13 +166,13 @@ label {
   #form_forside ::before,
   #bekraeftelse ::before,
   #betaling ::before,
-  #kurv ::before,
+  #kurv_page ::before,
   #menu ::before {
-    font-size: 5.5vh;
+    font-size: 4.5vh;
   }
 
   img#nav_icon {
-    width: 9.5vw;
+    width: 5.5vh;
   }
 }
 
@@ -179,27 +181,27 @@ label {
   #form_forside ::before,
   #bekraeftelse ::before,
   #betaling ::before,
-  #kurv ::before,
+  #kurv_page ::before,
   #menu ::before {
-    font-size: 6.5vh;
+    font-size: 5.5vh;
   }
 
   img#nav_icon {
-    width: 5.5vw;
+    width: 6.5vh;
   }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
   img#nav_icon {
-    width: 4.5vw;
+    width: 6.5vh;
   }
 }
 
 //laptop L
 @media screen and (min-width: 1440px) {
   img#nav_icon {
-    width: 4vw;
+    width: 6.5vh;
   }
 }
 
