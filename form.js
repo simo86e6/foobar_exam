@@ -1,6 +1,10 @@
 "use strict";
 import './style_form.scss'
 
+export function displayBeers() {
+  
+}
+
 let beerList = [];
 
 let Beer = {
