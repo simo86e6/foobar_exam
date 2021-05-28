@@ -12,6 +12,13 @@
 #beer_box {
   display: grid;
   justify-content: space-around;
+  max-height: 35%;
+}
+.more_body {
+  background-color: #00000073;
+  margin-top: -15vh;
+  padding: 2vh;
+  line-height: 3vh;
 }
 
 #beer {
