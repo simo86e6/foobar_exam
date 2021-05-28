@@ -35,14 +35,14 @@ async function getData() {
     console.log("fetchList");
     document.querySelector(".beer_container").innerHTML = "";
     data.forEach(createBeerObject);
-    test();
+    updateBeerAmount();
   
 }
 
-function test(){
+function updateBeerAmount(){
     document.querySelector(".beer_container").innerHTML = "";
     beerList.forEach(displayBeers);
-    updateShoppingBasket();
+    
 }
 
 function createBeerObject(data){
@@ -71,33 +71,43 @@ function createBeerObject(data){
     clone.querySelector(".beer_mouth_feel").textContent = beerObject.mouthfeel;
     clone.querySelector(".beer_flavour").textContent = beerObject.flavor;
     clone.querySelector(".beer_overall").textContent = beerObject.overall;
-    clone.querySelector(".counter_display").textContent = beerObject.amount;
+    clone.querySelector(".counter_display").textContent = 0;
     clone.querySelector(".counter_plus").addEventListener("click", function () {
-        beerObject.amount ++;
-        test();
+        let counterDisplay = this.previousElementSibling;
+        let currentCount = counterDisplay.innerHTML;
+        currentCount++;
+        counterDisplay.innerHTML = currentCount.toString();
       });
     clone.querySelector(".counter_minus").addEventListener("click", function () {
-        if(beerObject.amount != 0){
-            beerObject.amount --;
-            test();
-        }   
+        let counterDisplay = this.nextElementSibling;
+        let currentCount = counterDisplay.innerHTML;
+        if(currentCount >= 1){
+          currentCount--;
+          counterDisplay.innerHTML = currentCount.toString();
+        }
       });
       clone.querySelector(".collapsible").addEventListener("click", function () {
         let parent = this.parentElement;
         let sibling = parent.nextElementSibling;
         sibling.classList.toggle("hide");
       });
+      clone.querySelector("#test").addEventListener("click", function () {
+        debugger;
+        let counterDisplayParent = this.previousElementSibling;
+        let counterDisplay = counterDisplayParent.children[1];
+        beerObject.amount += parseInt(counterDisplay.innerHTML);
+        let amountInBasket = parseInt(document.querySelector("#amount_in_basket").innerHTML);
+        amountInBasket += parseInt(counterDisplay.innerHTML);
+        document.querySelector("#amount_in_basket").innerHTML = amountInBasket;
+
+        counterDisplay.innerHTML = 0;
+
+      });
   
     document.querySelector(".beer_container").appendChild(clone);
   }
 
 
-  function updateShoppingBasket(){
-      let amount = 0;
-      beerList.forEach(beer => {
-          amount += beer.amount;
-      });
-      document.querySelector("#amount_in_basket").innerHTML = amount;
-  }
+ 
   
 
