@@ -1,9 +1,9 @@
 "use strict";
 import './style_form.scss'
 
-export function displayBeers() {
-  
-}
+// export function fetchList() {
+
+// }
 
 let beerList = [];
 
@@ -53,7 +53,7 @@ function createBeerObject(data){
     beer.alcohol = data.alc;
     beer.appearance = data.description.appearance;
     beer.flavor = data.description.flavor;
-    beer.overall = data.description.overall;
+    beer.overall = data.description.overallImpression;
     beer.mouthfeel = data.description.mouthfeel;
     beer.picture = "img/glass/" + data.label;
     beerList.push(beer);

@@ -13,6 +13,7 @@
   display: grid;
   justify-content: space-around;
   max-height: 35%;
+  // margin-top: 5vh;
 }
 .more_body {
   background-color: #00000073;
@@ -22,7 +23,7 @@
 }
 
 #beer {
-  height: 25vh;
+  height: 37vh;
   place-self: center;
 }
 
@@ -71,13 +72,13 @@ div#test {
 }
 
 #beer_info h2 {
-  margin-top: -1vh;
+  margin-top: 1vh;
   text-align: center;
 }
 
 p.alcohol_procent {
-  margin-top: -4vh;
   text-align: center;
+  margin-top: -2vh;
 }
 
 #beer_info h3 {
@@ -85,15 +86,18 @@ p.alcohol_procent {
   text-align: center;
 }
 
-img#beer {
-  width: 45%;
-  height: auto;
-}
+// img#beer {
+//   width: 45%;
+//   height: auto;
+// }
 
 #menu_page footer {
   position: static;
 }
 
+.a-up-down {
+  animation: k-up-down 1s infinite alternate;
+}
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
