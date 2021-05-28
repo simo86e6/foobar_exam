@@ -11,15 +11,18 @@
   width: 10vw;
 }
 
-#bartenders div:first-child {
+#bartenders div:first-child(1) {
   display: flex;
   flex-direction: row;
 }
 
-#bartenders div:nth-child(2) {
-  display: none;
+.col_right {
+  flex-direction: row;
 }
+// #bartenders div:nth-child(2) {
+//   display: none;
+// }
 
-#bartenders div:nth-child(3) {
-  display: none;
-}
+// #bartenders div:nth-child(3) {
+//   display: none;
+// }

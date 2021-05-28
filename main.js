@@ -2,14 +2,14 @@
 import './styles.scss'
 
 const barStatsUrl = "https://foobar-examproject.herokuapp.com/";
-const beerInfoUrl = "https://foobar-examproject.herokuapp.com/beertypes";
 
 let orderFinishedList = [];
 let orderQueueList = [];
 let orderInProgressList = [];
 
-getData();
 
+getData();
+// hideBartenders();
 
 
 async function getData(){
@@ -17,13 +17,6 @@ async function getData(){
     const getBarStats = await fetch(barStatsUrl);
     const barStats = await getBarStats.json();
     displayStats(barStats);
-
-    const getBeerInfo = await fetch(beerInfoUrl);
-    const beerInfo = await getBeerInfo.json();
-
-    let queueLength = barStats.queue.length;
-    console.log("Queue Length: " + queueLength);
-
 }
 
 function displayStats(barStats){
@@ -35,11 +28,7 @@ function displayStats(barStats){
     updateOrders(barStats);
     updateStorage(barStats);
      
-  
-
-    
-
-    setTimeout(getData, 1000);
+    setTimeout(getData, 10000);
    
 
 }
@@ -48,70 +37,24 @@ function displayStats(barStats){
 
 // Denne funktion udfylder bartender-templaten og appender den til dashboardet
 function updateBartenders(barStats){
-
-    // const klon = document.querySelector("#temp_bartenders").innerHTML.cloneNode(true);
-    // const klon = document.getElementById("temp_bartenders").innerHTML.cloneNode(true);
-
-    let bartenders = document.querySelector(".temp_bartenders");
-    let klon = bartenders.innerHTML.cloneNode(true);
+    document.querySelector(".bartender_content").innerHTML = "";
     barStats.bartenders.forEach(bartender => {
+        const clone = document.querySelector(".temp_bartenders").content.cloneNode(true);
+        clone.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
+        clone.querySelector(".bartender_name").textContent = bartender.name;
+        clone.querySelector(".bartender_status").textContent = bartender.status;
+        clone.querySelector(".bartender_statusdetail").textContent = bartender.statusDetail;
 
-    klon.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
-    klon.querySelector(".bartender_name").textContent = bartender.name;
-    klon.querySelector(".bartender_status").textContent = bartender.status;
-    klon.querySelector(".bartender_statusdetail").textContent = bartender.statusDetail;
-    let tap = bartender.usingTap
-    if(tap === null){
-        klon.querySelector(".bartender_usingtap").textContent = "N/A";
-    } else {
-        klon.querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
-    }
-    klon.querySelector(".bartender_servingcustomer").textContent = bartender.servingCustomer;
+        let tap = bartender.usingTap
+        if(tap === null){
+            clone.querySelector(".bartender_usingtap").textContent = "N/A";
+        } else {
+            clone.querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
+        }
 
-    document.querySelector("#bartender_content").appendChild(klon);
-
+        clone.querySelector(".bartender_servingcustomer").textContent = bartender.servingCustomer;
+        document.querySelector(".bartender_content").appendChild(clone);
     });
-
-
-    // document.getElementById("bartenders").innerHTML = "";
-    // barStats.bartenders.forEach(bartender => {
-        
-    //     const bartenderDiv = document.createElement("div");
-
-    //     const bartenderImg = document.createElement("img");
-    //     bartenderImg.className = "bartender_pictures";
-    //     bartenderImg.src = "/img/" + bartender.name + ".png";
-       
-
-    //     const name = document.createElement("p");
-    //     name.innerHTML = bartender.name;
-
-    //     const status = document.createElement("p");
-    //     status.innerHTML = bartender.status;
-
-    //     const statusDetail = document.createElement("p");
-    //     statusDetail.innerHTML = bartender.statusDetail;
-
-    //     let tap = bartender.usingTap
-    //     const usingTap = document.createElement("p");
-    //     if(tap === null){
-    //         usingTap.innerHTML = "N/A";
-    //     } else {
-    //         usingTap.innerHTML = barStats.taps[tap].beer;
-    //     }
-
-    //     const servingCustomer = document.createElement("p");
-    //     servingCustomer.innerHTML = bartender.servingCustomer;
-
-    //     bartenderDiv.appendChild(bartenderImg);
-    //     bartenderDiv.appendChild(name);
-    //     bartenderDiv.appendChild(status);
-    //     bartenderDiv.appendChild(statusDetail);
-    //     bartenderDiv.appendChild(usingTap);
-    //     bartenderDiv.appendChild(servingCustomer);
-    //     document.getElementById("bartenders").appendChild(bartenderDiv);
-
-    // });
 
 }
 //Denne funktion viser dataen i "Bestillinger i kø..." 
@@ -246,6 +189,14 @@ function msToTime(s) {
    
 }
 
+// function hideBartenders(){
+//     debugger;
+//    let bartenders = document.querySelectorAll(".content");
+//    bartenders.forEach(bartender => {
+//        bartender.classList.add("jonas");
+//    });
+// }
+
 //   function updateTime(barStats){
 //       let hourHand = document.getElementById("hourHand");
 //       let minuteHand = document.getElementById("minuteHand");
@@ -270,20 +221,23 @@ function msToTime(s) {
 
 
 
-const deg = 6;
-                    const hr = document.querySelector('#hr');
-                    const mn = document.querySelector('#mn');
-                    const sc = document.querySelector('#sc');
+// const deg = 6;
+//                     const hr = document.querySelector('#hr');
+//                     const mn = document.querySelector('#mn');
+//                     const sc = document.querySelector('#sc');
                     
-                    setInterval(() =>{
+//                     setInterval(() =>{
                         
-                         let day = new Date();
-                    let hh = day.getHours() * 30;
-                    let mm = day.getMinutes() * deg;
-                    let ss = day.getSeconds() * deg;
+//                          let day = new Date();
+//                     let hh = day.getHours() * 30;
+//                     let mm = day.getMinutes() * deg;
+//                     let ss = day.getSeconds() * deg;
                     
-                    hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
-                    mn.style.transform = `rotateZ(${mm}deg)`;
-                    sc.style.transform = `rotateZ(${ss}deg)`;
+//                     hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+//                     mn.style.transform = `rotateZ(${mm}deg)`;
+//                     sc.style.transform = `rotateZ(${ss}deg)`;
                         
-                    })
+//                     })
+
+
+                    
