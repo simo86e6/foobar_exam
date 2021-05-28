@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard</title>
-<script type="module" crossorigin src="./assets/dashboard.246f8f55.js"></script>
-  <link rel="modulepreload" href="./assets/main.6211e445.js">
-  <link rel="stylesheet" href="./assets/main.fb5583f8.css">
+<script type="module" crossorigin src="./assets/dashboard.a2c5f8e4.js"></script>
+  <link rel="modulepreload" href="./assets/main.25f9c63d.js">
+  <link rel="stylesheet" href="./assets/main.e63efdb2.css">
 </head>
 <body>
     <header>
@@ -119,40 +119,42 @@
             </div>
             </div>
             <div class="col-sm2">
-            <div id="bartenders">
-                
+                <div id="bartenders">
+                    <template class="temp_bartenders">
+                        <h2>Bartendere</h2>
+                        <div class="content">
+                            <div class="col_left">
+                                <img src="#" alt="bartender" class="each_bartender">
+                                <h3 class="bartender_name"></h3>
+                                <p class="bartender_status"></p>
+                            </div>
+                            <div class="col_right">
+                                <div class="box">
+                                    <h3>Status</h3>
+                                    <p class="bartender_statusdetail"></p>
+                                </div>
+                                <div class="box">
+                                    <h3>Skænker</h3>
+                                    <p class="bartender_usingtap"></p>
+                                </div>
+                                <div class="box">
+                                    <h3>Serverer</h3>
+                                    <p class="bartender_servingcustomer"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <div id="bartender_content">
+                        <!-- APPEND KLON -->
+                    </div>
+
+                </div>
             </div>
-        </div>
                 
         </section>
 
-        <template>
-            <div id="bartenders">
-                <h2>Bartendere</h2>
-                <div class="content">
-                    <div class="col_left">
-                        <img src="#" alt="bartender">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                    <div class="col_right">
-                        <div class="box">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="box">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="box">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </template>
-
+        
     </main>
     
 </body>
