@@ -46,48 +46,72 @@ function displayStats(barStats){
 
 
 
-// Denne funktion står for at lave en div til hver bartender
-// samt udfylde div'en med diverse informationer
+// Denne funktion udfylder bartender-templaten og appender den til dashboardet
 function updateBartenders(barStats){
-    document.getElementById("bartenders").innerHTML = "";
+
+    // const klon = document.querySelector("#temp_bartenders").innerHTML.cloneNode(true);
+    // const klon = document.getElementById("temp_bartenders").innerHTML.cloneNode(true);
+
+    let bartenders = document.querySelector(".temp_bartenders");
+    let klon = bartenders.innerHTML.cloneNode(true);
     barStats.bartenders.forEach(bartender => {
-        
-        const bartenderDiv = document.createElement("div");
 
-        const bartenderImg = document.createElement("img");
-        bartenderImg.className = "bartender_pictures";
-        bartenderImg.src = "/img/" + bartender.name + ".png";
-       
+    klon.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
+    klon.querySelector(".bartender_name").textContent = bartender.name;
+    klon.querySelector(".bartender_status").textContent = bartender.status;
+    klon.querySelector(".bartender_statusdetail").textContent = bartender.statusDetail;
+    let tap = bartender.usingTap
+    if(tap === null){
+        klon.querySelector(".bartender_usingtap").textContent = "N/A";
+    } else {
+        klon.querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
+    }
+    klon.querySelector(".bartender_servingcustomer").textContent = bartender.servingCustomer;
 
-        const name = document.createElement("p");
-        name.innerHTML = bartender.name;
-
-        const status = document.createElement("p");
-        status.innerHTML = bartender.status;
-
-        const statusDetail = document.createElement("p");
-        statusDetail.innerHTML = bartender.statusDetail;
-
-        let tap = bartender.usingTap
-        const usingTap = document.createElement("p");
-        if(tap === null){
-            usingTap.innerHTML = "N/A";
-        } else {
-            usingTap.innerHTML = barStats.taps[tap].beer;
-        }
-
-        const servingCustomer = document.createElement("p");
-        servingCustomer.innerHTML = bartender.servingCustomer;
-
-        bartenderDiv.appendChild(bartenderImg);
-        bartenderDiv.appendChild(name);
-        bartenderDiv.appendChild(status);
-        bartenderDiv.appendChild(statusDetail);
-        bartenderDiv.appendChild(usingTap);
-        bartenderDiv.appendChild(servingCustomer);
-        document.getElementById("bartenders").appendChild(bartenderDiv);
+    document.querySelector("#bartender_content").appendChild(klon);
 
     });
+
+
+    // document.getElementById("bartenders").innerHTML = "";
+    // barStats.bartenders.forEach(bartender => {
+        
+    //     const bartenderDiv = document.createElement("div");
+
+    //     const bartenderImg = document.createElement("img");
+    //     bartenderImg.className = "bartender_pictures";
+    //     bartenderImg.src = "/img/" + bartender.name + ".png";
+       
+
+    //     const name = document.createElement("p");
+    //     name.innerHTML = bartender.name;
+
+    //     const status = document.createElement("p");
+    //     status.innerHTML = bartender.status;
+
+    //     const statusDetail = document.createElement("p");
+    //     statusDetail.innerHTML = bartender.statusDetail;
+
+    //     let tap = bartender.usingTap
+    //     const usingTap = document.createElement("p");
+    //     if(tap === null){
+    //         usingTap.innerHTML = "N/A";
+    //     } else {
+    //         usingTap.innerHTML = barStats.taps[tap].beer;
+    //     }
+
+    //     const servingCustomer = document.createElement("p");
+    //     servingCustomer.innerHTML = bartender.servingCustomer;
+
+    //     bartenderDiv.appendChild(bartenderImg);
+    //     bartenderDiv.appendChild(name);
+    //     bartenderDiv.appendChild(status);
+    //     bartenderDiv.appendChild(statusDetail);
+    //     bartenderDiv.appendChild(usingTap);
+    //     bartenderDiv.appendChild(servingCustomer);
+    //     document.getElementById("bartenders").appendChild(bartenderDiv);
+
+    // });
 
 }
 //Denne funktion viser dataen i "Bestillinger i kø..." 
