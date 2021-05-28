@@ -1,27 +1,37 @@
 //----------MENU-----------------//
 
+#menu_page {
+  margin: 0;
+}
+
+#menu_page #menu {
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+
 #beer_box {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: space-around;
-  margin-bottom: 10vh;
 }
 
 #beer {
   height: 25vh;
+  place-self: center;
 }
 
 #beer_btns {
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  padding-bottom: 2vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4vh;
+  justify-self: center;
+  margin-top: -2vh;
 }
 
 #btns_container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #menu #beer_box:first-of-type {
@@ -30,6 +40,51 @@
 
 .hide {
   display: none;
+}
+
+#button_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 17vh;
+  margin-top: 3vh;
+}
+
+div#test {
+  display: flex;
+  justify-content: center;
+}
+
+#menu_page button {
+  padding: 2vh;
+}
+
+.counter_display {
+  padding: 0.7vh;
+  text-align: center;
+}
+
+#beer_info h2 {
+  margin-top: -1vh;
+  text-align: center;
+}
+
+p.alcohol_procent {
+  margin-top: -4vh;
+  text-align: center;
+}
+
+#beer_info h3 {
+  margin-top: -1vh;
+  text-align: center;
+}
+
+img#beer {
+  width: 45%;
+  height: auto;
+}
+
+#menu_page footer {
+  position: static;
 }
 
 //------------------------------------------//
@@ -46,6 +101,16 @@
 
 //tablet
 @media screen and (min-width: 768px) {
+  section.beer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20vh;
+    grid-gap: 10vh;
+  }
+
+  #menu #beer_box:first-of-type {
+    margin-top: unset;
+  }
 }
 
 //laptop

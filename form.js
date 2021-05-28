@@ -79,12 +79,14 @@ function createBeerObject(data){
         }   
       });
       clone.querySelector(".collapsible").addEventListener("click", function () {
-        let sibling = this.nextElementSibling;
+        let parent = this.parentElement;
+        let sibling = parent.nextElementSibling;
         sibling.classList.toggle("hide");
       });
   
     document.querySelector(".beer_container").appendChild(clone);
   }
+
 
   function updateShoppingBasket(){
       let amount = 0;

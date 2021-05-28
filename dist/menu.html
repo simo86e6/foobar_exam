@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>form_menu</title>
-<script type="module" crossorigin src="./assets/menu.ad8b03ab.js"></script>
-  <link rel="modulepreload" href="./assets/form.5067d1fc.js">
-  <link rel="stylesheet" href="./assets/form.2c091eae.css">
+<script type="module" crossorigin src="./assets/menu.3281e1ce.js"></script>
+  <link rel="modulepreload" href="./assets/form.ae73074a.js">
+  <link rel="stylesheet" href="./assets/form.6def0b1a.css">
 </head>
-<body>
+<body id="menu_page">
     <nav>
         <div id="top_nav">
             <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon">
             <h1 id="logo">FOOBAR</h1>
+            <p id="amount_in_basket"></p>
             <i class='fa fa-shopping-basket'></i>
         </div>
         <div id="tilbage">
@@ -37,14 +38,17 @@
             </div>
             <div id="beer_btns">
                 <div id="btns_container">
-                    <button>-</button>
-                    <p>Antal</p>
-                    <button>+</button>
+                    <button class="counter_minus">-</button>
+                    <p class="counter_display"></p>
+                    <button class="counter_plus">+</button>
                 </div>
                 <button>Læg i kurv</button>
             </div> 
         </div>
         <div>
+            <div id="button_container">
+                <button class="collapsible">show content</button>
+            </div>
             <div class="more_body hide">
                 <!-- <img src="" alt="" class="beer_label" /> -->
                 <div class="product_txt">
@@ -62,6 +66,7 @@
                   <p class="beer_overall"></p>
                 </div>
               </div>
+            
         </div>
             </template>
             
