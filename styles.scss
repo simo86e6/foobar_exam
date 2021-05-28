@@ -111,13 +111,14 @@ header {
   display: grid;
   grid-template-columns: 1.5fr 2fr 2.5fr;
   grid-gap: 2vw;
-  margin-bottom: 6vh;
+  margin-bottom: 7vh;
 }
 
 #bottom {
   display: grid;
   grid-template-columns: 2.5fr 3fr;
   grid-gap: 2vw;
+  margin-bottom: 6vh;
 }
 
 .col-sm,
@@ -134,6 +135,7 @@ header {
 .col-sm1,
 .col-sm2 {
   padding: 2vh 2vw;
+  min-height: 30vh;
 }
 
 #clock,
