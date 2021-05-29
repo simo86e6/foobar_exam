@@ -98,6 +98,18 @@ p.alcohol_procent {
 .a-up-down {
   animation: k-up-down 1s infinite alternate;
 }
+
+p#amount_in_basket {
+  background-color: green;
+  border-radius: 8vh;
+  position: absolute;
+  right: 1%;
+  padding: 0.8vh;
+}
+
+#menu_page #nav_icon {
+  margin-top: 0;
+}
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
@@ -122,14 +134,28 @@ p.alcohol_procent {
   #menu #beer_box:first-of-type {
     margin-top: unset;
   }
+
+  #menu_page #nav_icon {
+    margin-top: -0.6vh;
+  }
+
+  p#amount_in_basket {
+    right: 2%;
+  }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
+  p#amount_in_basket {
+    right: 2.5%;
+  }
 }
 
 //laptop L
 @media screen and (min-width: 1440px) {
+  p#amount_in_basket {
+    right: 3%;
+  }
 }
 
 //4k
