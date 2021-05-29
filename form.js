@@ -1,11 +1,12 @@
 "use strict";
 import './style_form.scss'
 
-// export function fetchList() {
-
-// }
+const beerInfoUrl = "https://foobar-examproject.herokuapp.com/beertypes";
+const barStatsUrl = "https://foobar-examproject.herokuapp.com/";
 
 let beerList = [];
+let beerNamesOnTap = [];
+
 
 let Beer = {
   name: "",
@@ -17,32 +18,56 @@ let Beer = {
   overall: "",
   mouthfeel: "",
   picture: "",
-  amount: 0
+  amount: 0,
+  isOnTap: false
 }
+
+
 
 getData();
 
+
 async function getData() {
-    
-    let response = await fetch("https://foobar-examproject.herokuapp.com/beertypes");
-    let jsonData = await response.json();
-    fetchList(jsonData);
-    
+    const getBarStats = await fetch(barStatsUrl);
+    let barStats = await getBarStats.json();
+
+    const getBeerInfo = await fetch(beerInfoUrl);
+    let beerInfo = await getBeerInfo.json();
+
+    fetchList(beerInfo, barStats);
+    redirectToBasket();
+  }
+
+  function redirectToBasket(){
+      let links = document.querySelectorAll(".link_basket");
+      links.forEach(link => {
+        link.addEventListener("click", function(){
+          let beerListString = JSON.stringify(beerList);
+          sessionStorage.setItem("selectedBeers", beerListString);
+          window.location.href = "kurv.html";
+        });
+      });
   }
   
-
-  function fetchList(data) {
+  function fetchList(beerInfo, barStats) {
     console.log("fetchList");
     document.querySelector(".beer_container").innerHTML = "";
-    data.forEach(createBeerObject);
-    updateBeerAmount();
-  
+    beerInfo.forEach(createBeerObject);
+    beersOnTap(barStats);
+    updateBeerAmount(barStats);
+}
+
+function beersOnTap(barStats){
+  let taps = barStats.taps;
+  taps.forEach(tap => {
+    let tapName = tap.beer;
+    beerNamesOnTap.push(tapName);
+  });
 }
 
 function updateBeerAmount(){
     document.querySelector(".beer_container").innerHTML = "";
     beerList.forEach(displayBeers);
-    
 }
 
 function createBeerObject(data){
@@ -72,12 +97,14 @@ function createBeerObject(data){
     clone.querySelector(".beer_flavour").textContent = beerObject.flavor;
     clone.querySelector(".beer_overall").textContent = beerObject.overall;
     clone.querySelector(".counter_display").textContent = 0;
+
     clone.querySelector(".counter_plus").addEventListener("click", function () {
         let counterDisplay = this.previousElementSibling;
         let currentCount = counterDisplay.innerHTML;
         currentCount++;
         counterDisplay.innerHTML = currentCount.toString();
       });
+
     clone.querySelector(".counter_minus").addEventListener("click", function () {
         let counterDisplay = this.nextElementSibling;
         let currentCount = counterDisplay.innerHTML;
@@ -86,26 +113,32 @@ function createBeerObject(data){
           counterDisplay.innerHTML = currentCount.toString();
         }
       });
+
       clone.querySelector(".collapsible").addEventListener("click", function () {
         let parent = this.parentElement;
         let sibling = parent.nextElementSibling;
         sibling.classList.toggle("hide");
       });
-      clone.querySelector("#test").addEventListener("click", function () {
-        debugger;
-        let counterDisplayParent = this.previousElementSibling;
-        let counterDisplay = counterDisplayParent.children[1];
-        beerObject.amount += parseInt(counterDisplay.innerHTML);
-        let amountInBasket = parseInt(document.querySelector("#amount_in_basket").innerHTML);
-        amountInBasket += parseInt(counterDisplay.innerHTML);
-        document.querySelector("#amount_in_basket").innerHTML = amountInBasket;
 
-        counterDisplay.innerHTML = 0;
-
-      });
+      if(!beerNamesOnTap.includes(beerObject.name)){
+        clone.querySelector(".add_to_basket").textContent = "Not on tap";
+      } else {
+        clone.querySelector("#test").addEventListener("click", function () {
+          let counterDisplayParent = this.previousElementSibling;
+          let counterDisplay = counterDisplayParent.children[1];
+          beerObject.amount += parseInt(counterDisplay.innerHTML);
+          let amountInBasket = parseInt(document.querySelector("#amount_in_basket").innerHTML);
+          amountInBasket += parseInt(counterDisplay.innerHTML);
+          document.querySelector("#amount_in_basket").innerHTML = amountInBasket;
   
+          counterDisplay.innerHTML = 0;
+        });
+      }
+
     document.querySelector(".beer_container").appendChild(clone);
   }
+
+
 
 
  
