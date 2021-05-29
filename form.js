@@ -42,6 +42,7 @@ async function getData() {
       let links = document.querySelectorAll(".link_basket");
       links.forEach(link => {
         link.addEventListener("click", function(){
+          debugger;
           let beerListString = JSON.stringify(beerList);
           sessionStorage.setItem("selectedBeers", beerListString);
           window.location.href = "kurv.html";
@@ -51,8 +52,20 @@ async function getData() {
   
   function fetchList(beerInfo, barStats) {
     console.log("fetchList");
+    debugger;
     document.querySelector(".beer_container").innerHTML = "";
+    if ("selectedBeers" in sessionStorage) {
+      beerList = JSON.parse(sessionStorage.getItem("selectedBeers"));
+      let amount = 0;
+      beerList.forEach(beer => {
+        if(beer.amount > 0){
+          amount += beer.amount;
+        }
+      });
+      document.querySelector("#amount_in_basket").innerHTML = amount;
+  } else {
     beerInfo.forEach(createBeerObject);
+  }
     beersOnTap(barStats);
     updateBeerAmount(barStats);
 }
