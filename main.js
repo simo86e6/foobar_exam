@@ -10,9 +10,6 @@ let orderInProgressList = [];
 let counter = 0;
 
 getData();
-bartenderRotation();
-// hideBartenders();
-
 
 async function getData(){
    
@@ -22,27 +19,20 @@ async function getData(){
 }
 
 function bartenderRotation(){
-    try {
+   
         let bartenders = document.querySelectorAll(".content");
-
-        
         if(counter >= bartenders.length){
             counter = 0;
         }
-
         for (let i = 0; i < bartenders.length; i++) {
             if(i == counter){
                 bartenders[i].classList.remove("hide");
             } else {
                 bartenders[i].classList.add("hide");
             }
-            
         }
         counter++;
     setTimeout(bartenderRotation, 10000);
-    } catch (error) {
-        setTimeout(bartenderRotation, 300);
-    }
     
 }
 
@@ -108,7 +98,7 @@ function initBartenders(barStats){
         clone.querySelector(".bartender_servingcustomer").textContent = bartender.servingCustomer;
         document.querySelector(".bartender_content").appendChild(clone);
     });
-
+    bartenderRotation();
 }
 //Denne funktion viser dataen i "Bestillinger i kø..." 
 function updateQueue(barStats){
@@ -118,6 +108,12 @@ function updateQueue(barStats){
     document.getElementById("queue_number").innerHTML = queueLength;
 
     for (let i = 0; i < queueLength; i++) {
+        if(i >= 5){
+            const pTag = document.createElement("p");
+            pTag.innerText = "...";
+            document.getElementById("beer_pictures").appendChild(pTag);
+            return;
+        }
         
     const img = document.createElement("img");
     img.className = "beer_picture";
@@ -140,14 +136,17 @@ function updateOrders(barStats){
     //Denne del tager sig af at vise de bestillinger som er i kø
     let queueCount = 0;
     orderQueueList.forEach(order => {
-        if(queueCount < 5){
+        if(queueCount < 1){
             const pTag = document.createElement("p");
             pTag.innerHTML = order.id;
             document.getElementById("order_queue").appendChild(pTag);
             queueCount++;
+        } else if(queueCount == 1){
+            const pTag = document.createElement("p");
+            pTag.innerText = "...";
+            document.getElementById("order_queue").appendChild(pTag);
+            queueCount++;
         }
-        
-        
     });
 
     // Denne del tager sig af at vise de bestillinger som bartenderne arbejder på lige nu.
