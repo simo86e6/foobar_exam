@@ -9,12 +9,15 @@ let orderInProgressList = [];
 
 let counter = 0;
 
+
+
+
 getData();
 
 async function getData(){
    
     const getBarStats = await fetch(barStatsUrl);
-    const barStats = await getBarStats.json();
+    let barStats = await getBarStats.json();
     displayStats(barStats);
 }
 

@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-<script type="module" crossorigin src="./assets/kurv.51c2ff8c.js"></script>
-  <link rel="stylesheet" href="./assets/style_form.da4337f0.css">
+<script type="module" crossorigin src="./assets/kurv.43a1f0ac.js"></script>
+  <link rel="stylesheet" href="./assets/style_form.03dbc2c7.css">
 </head>
 <body id="kurv_page">
     <nav>
         <div id="top_nav">
-            <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon">
-            <h1 id="logo">FOOBAR</h1>
-            <i class='fa fa-shopping-basket'></i>
-        </div>
+            <div class="dropdown">
+              <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon">
+            
+  
+              <div class="dropdown-content">
+                <p>DIT BESTILLINGSNUMMER</p>
+              </div>
+          </div>
+              <h1 id="logo">FOOBAR</h1>
+              <i class='fa fa-shopping-basket'></i>
+          </div>
         <div id="tilbage">
             <i class='fa fa-caret-left'></i>
             <h4>Gå tilbage</h4>
@@ -25,58 +32,28 @@
     
     <div id="kurv">
         <div class="cart_summary">
-            <h2>DIN BESTILLING (2 varer)</h2>
+            <h2 class="basket_total_orders"></h2>
+            <template class="basket_template">
             <div id="beer_box">
-                <img src="./assets/fairytaleale.b22d6219.png" alt="beer" id="beer">
+                <img class="basket_beer_picture" src="#" alt="beer" id="beer">
                    <div id="beer_info">
-                       
                        <div id="left_column">
-                           <h2>Fairytale Ale</h2>
-                           <p>blablabalbalbalb godddd bajer do</p>
-
-                           <div id="beer_btns">
-                               <div id="btns_container">
-                                   <button>-</button>
-                                   <p>0</p>
-                                   <button>+</button>
-                               </div>
-                           </div>
+                           <h2 class="basket_beer_name"></h2>
+                           <p class="basket_amount"></p>
                        </div>
                        
                        <div id="right_column">
-                           <h3>29,95 dkk</h3>
+                           <h3 class="basket_line_total"></h3>
                        </div>
-                       
                    </div>
                </div>
+            </template>
 
-             <div id="beer_box">
-                 <img src="./assets/fairytaleale.b22d6219.png" alt="beer" id="beer">
-                    <div id="beer_info">
-                        
-                        <div id="left_column">
-                            <h2>Fairytale Ale</h2>
-                            <p>blablabalbalbalb godddd bajer do</p>
+            <section class="basket_container">
 
-                            <div id="beer_btns">
-                                <div id="btns_container">
-                                    <button>-</button>
-                                    <p>0</p>
-                                    <button>+</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="right_column">
-                            <h3>29,95 dkk</h3>
-                        </div>
-                        
-                    </div>
-                </div>
-            
-          
+            </section>
             <div id="price_total"><p>PRICE IN TOTAL</p></div>
-            <p class="head2"><span class="total_amount_right title"></span>DKK</p>
+            <p class="head2"><span class="total_amount_right title"></span></p>
         
 
           <button onclick="window.location.href=('betaling.html')">KØB</button>
