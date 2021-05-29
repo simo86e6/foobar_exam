@@ -7,8 +7,10 @@ let orderFinishedList = [];
 let orderQueueList = [];
 let orderInProgressList = [];
 
+let counter = 0;
 
 getData();
+bartenderRotation();
 // hideBartenders();
 
 
@@ -19,27 +21,78 @@ async function getData(){
     displayStats(barStats);
 }
 
+function bartenderRotation(){
+    try {
+        let bartenders = document.querySelectorAll(".content");
+
+        
+        if(counter >= bartenders.length){
+            counter = 0;
+        }
+
+        for (let i = 0; i < bartenders.length; i++) {
+            if(i == counter){
+                bartenders[i].classList.remove("hide");
+            } else {
+                bartenders[i].classList.add("hide");
+            }
+            
+        }
+        counter++;
+    setTimeout(bartenderRotation, 10000);
+    } catch (error) {
+        setTimeout(bartenderRotation, 300);
+    }
+    
+}
+
 function displayStats(barStats){
 
     // updateTime(barStats);
     updateCountdown(barStats);
-    updateBartenders(barStats);
+    if(document.querySelector(".bartender_content").children.length == 0){
+        initBartenders(barStats);
+    } else{
+        updateBartenders(barStats);
+    }
+    
     updateQueue(barStats);
     updateOrders(barStats);
     updateStorage(barStats);
      
-    setTimeout(getData, 10000);
+    setTimeout(getData, 1000);
    
 
 }
 
+function updateBartenders(barStats){
+    let bartenderContents = document.querySelectorAll(".content");
 
+    for (let i = 0; i < bartenderContents.length; i++) {
+        
+        bartenderContents[i].querySelector('.each_bartender').src = "/img/" + barStats.bartenders[i].name + ".png";
+        bartenderContents[i].querySelector('.bartender_name').textContent = barStats.bartenders[i].name;
+        bartenderContents[i].querySelector('.bartender_status').textContent = barStats.bartenders[i].status;
+        bartenderContents[i].querySelector('.bartender_statusdetail').textContent = barStats.bartenders[i].statusDetail;
+
+        let tap = barStats.bartenders[i].usingTap
+        if(tap === null){
+            bartenderContents[i].querySelector('.bartender_usingtap').textContent = "N/A";
+        } else {
+            bartenderContents[i].querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
+        }
+
+        bartenderContents[i].querySelector(".bartender_servingcustomer").textContent = barStats.bartenders[i].servingCustomer;
+        
+    }
+}
 
 // Denne funktion udfylder bartender-templaten og appender den til dashboardet
-function updateBartenders(barStats){
+function initBartenders(barStats){
     document.querySelector(".bartender_content").innerHTML = "";
     barStats.bartenders.forEach(bartender => {
         const clone = document.querySelector(".temp_bartenders").content.cloneNode(true);
+        // clone.querySelector(".content").classList.add("show_" + bartender.name);
         clone.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
         clone.querySelector(".bartender_name").textContent = bartender.name;
         clone.querySelector(".bartender_status").textContent = bartender.status;

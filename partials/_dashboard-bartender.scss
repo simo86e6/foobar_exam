@@ -7,22 +7,42 @@
 //   height: 45vh;
 // }
 
+.content {
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.col_left {
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+}
+
 #bartenders img {
   width: 10vw;
 }
 
-#bartenders div:first-child(1) {
-  display: flex;
-  flex-direction: row;
-}
-
 .col_right {
-  flex-direction: row;
-}
-// #bartenders div:nth-child(2) {
-//   display: none;
-// }
+  display: grid;
 
-// #bartenders div:nth-child(3) {
-//   display: none;
-// }
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+}
+
+.col_right .box {
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
