@@ -2,16 +2,19 @@
 import './style_form.scss'
 
 
-let beers = JSON.parse(sessionStorage.getItem("selectedBeers"));
+
 
 basketSetup();
 
 function basketSetup(){
+    debugger;
+    let beers = JSON.parse(sessionStorage.getItem("selectedBeers"));
+    console.log(JSON.parse(sessionStorage.getItem("selectedBeers")));
     let amountOfOrders = 0;
     let totalPrice = 0;
     
     beers.forEach(beerOrder => {
-        if(beerOrder.amount != null){
+        if(beerOrder.amount != 0){
             amountOfOrders += beerOrder.amount;
             totalPrice += showOrder(beerOrder);
         }

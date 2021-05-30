@@ -45,6 +45,7 @@ async function getData() {
           debugger;
           let beerListString = JSON.stringify(beerList);
           sessionStorage.setItem("selectedBeers", beerListString);
+          console.log(JSON.parse(sessionStorage.getItem("selectedBeers")));
           window.location.href = "kurv.html";
         });
       });
@@ -85,6 +86,7 @@ function updateBeerAmount(){
 
 function createBeerObject(data){
     let beer = Object.create(Beer);
+    beer.amount = 0;
     beer.name = data.name;
     beer.price = 50;
     beer.aroma = data.description.aroma;
@@ -137,6 +139,7 @@ function createBeerObject(data){
         clone.querySelector(".add_to_basket").textContent = "Not on tap";
       } else {
         clone.querySelector("#test").addEventListener("click", function () {
+          debugger;
           let counterDisplayParent = this.previousElementSibling;
           let counterDisplay = counterDisplayParent.children[1];
           beerObject.amount += parseInt(counterDisplay.innerHTML);
