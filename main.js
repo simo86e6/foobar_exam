@@ -52,6 +52,7 @@ function displayStats(barStats){
     updateQueue(barStats);
     updateOrders(barStats);
     updateStorage(barStats);
+    updateTime(barStats);
      
     setTimeout(getData, 1000);
    
@@ -189,6 +190,50 @@ function updateOrders(barStats){
 
 }
 
+//Denne funtion får de analog ur til at gå efter normaltid
+function updateTime(barStats){
+    let hourHand = document.getElementById("hourHand");
+    let minuteHand = document.getElementById("minuteHand");
+    let secondHand = document.getElementById("secondHand");
+
+    let date = new Date();
+    let hour = date.getHours() % 12;
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+
+    let hourDeg = hour * 30;
+    let minuteDeg = minute * 6;
+    let secondDeg = second * 6;
+
+    hourHand.style.transform = "rotate(" + hourDeg + "deg)";
+    minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
+    secondHand.style.transform = "rotate(" + secondDeg + "deg)";
+
+  
+
+}
+
+
+
+const deg = 6;
+                  const hr = document.querySelector('#hr');
+                  const mn = document.querySelector('#mn');
+                  const sc = document.querySelector('#sc');
+                  
+                  setInterval(() =>{
+                      
+                       let day = new Date();
+                  let hh = day.getHours() * 30;
+                  let mm = day.getMinutes() * deg;
+                  let ss = day.getSeconds() * deg;
+                  
+                  hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+                  mn.style.transform = `rotateZ(${mm}deg)`;
+                  sc.style.transform = `rotateZ(${ss}deg)`;
+                      
+                  })
+
+
 // Denne funktion laver nedtællingen
 function updateCountdown(barStats){
     let ts = barStats.timestamp;
@@ -252,47 +297,7 @@ function msToTime(s) {
 //    });
 // }
 
-//   function updateTime(barStats){
-//       let hourHand = document.getElementById("hourHand");
-//       let minuteHand = document.getElementById("minuteHand");
-//       let secondHand = document.getElementById("secondHand");
 
-//       let date = new Date();
-//       let hour = date.getHours() % 12;
-//       let minute = date.getMinutes();
-//       let second = date.getSeconds();
-
-//       let hourDeg = hour * 30;
-//       let minuteDeg = minute * 6;
-//       let secondDeg = second * 6;
-
-//       hourHand.style.transform = "rotate(" + hourDeg + "deg)";
-//       minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
-//       secondHand.style.transform = "rotate(" + secondDeg + "deg)";
-
-    
-
-//   }
-
-
-
-// const deg = 6;
-//                     const hr = document.querySelector('#hr');
-//                     const mn = document.querySelector('#mn');
-//                     const sc = document.querySelector('#sc');
-                    
-//                     setInterval(() =>{
-                        
-//                          let day = new Date();
-//                     let hh = day.getHours() * 30;
-//                     let mm = day.getMinutes() * deg;
-//                     let ss = day.getSeconds() * deg;
-                    
-//                     hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
-//                     mn.style.transform = `rotateZ(${mm}deg)`;
-//                     sc.style.transform = `rotateZ(${ss}deg)`;
-                        
-//                     })
 
 
                     

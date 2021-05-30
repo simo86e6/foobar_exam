@@ -145,5 +145,25 @@ header {
 #bartenders {
   width: 100%;
   min-height: 100%;
-  // padding: 1vw;
+}
+
+@media screen and (max-width: 420px) {
+  #top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+  }
+
+  #bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-sm,
+  .col-sm1,
+  .col-sm2 {
+    margin-bottom: 2vh;
+  }
+}
+
+@media screen and (min-width: 375px) {
 }
