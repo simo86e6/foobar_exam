@@ -273,7 +273,7 @@ function msToTime(s) {
         document.getElementById(imgElementId).src = imgSrc;
         document.getElementById(nameElementId).innerHTML = lowestLevels[i].beer;
         document.getElementById(levelElementId).innerHTML = lowestLevels[i].level;
-        document.getElementById(kegElementId).innerHTML = 3;
+        // document.getElementById(kegElementId).innerHTML = 3;
 
         
     }

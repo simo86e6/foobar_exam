@@ -1,18 +1,19 @@
 #clock {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  margin-top: 2vh;
 }
 
 #countdown_text {
+  margin-top: 8vh;
   text-align: center;
 }
 
 #clock h3 {
   font-family: var(--handwritten_font);
-  margin-top: 7vh;
   font-size: 1rem;
+  margin-top: 2vh;
 }
 
 .clock {

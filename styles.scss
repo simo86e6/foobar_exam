@@ -12,6 +12,12 @@
   --dark_overlay: #000000bb;
 }
 
+* {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
 #logo {
   font-family: var(--sansserif_font);
   font-weight: 900;
@@ -25,7 +31,7 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: var(--yellow);
-  line-height: 0;
+  line-height: 1;
 }
 
 h2 {
@@ -33,10 +39,11 @@ h2 {
   font-weight: 700;
   font-style: normal;
   color: var(--yellow);
-  line-height: 0;
-  margin-bottom: 8vh;
+  line-height: 1;
   text-align: center;
   font-size: 1.3rem;
+  margin-top: 1vh;
+  margin-bottom: 4vh;
 }
 
 h3 {
@@ -44,7 +51,7 @@ h3 {
   font-weight: 600;
   font-style: normal;
   color: var(--yellow);
-  line-height: 0;
+  line-height: 1;
   font-size: 0.8rem;
 }
 
@@ -52,14 +59,14 @@ h4 {
   font-family: var(--sansserif_font);
   font-style: bold;
   color: var(--yellow);
-  line-height: 0;
+  line-height: 1;
 }
 
 p {
   font-family: var(--sansserif_font);
   font-style: normal;
   color: white;
-  line-height: 0;
+  line-height: 1;
   font-weight: 700;
   font-size: 0.8rem;
 }
@@ -84,17 +91,31 @@ label {
   font-size: 1rem;
 }
 
+#portraet_tekst {
+  font-family: var(--handwritten_font);
+  font-weight: 900;
+  font-style: normal;
+  color: white;
+  line-height: 1;
+  text-align: center;
+}
+
 //*******GENEREL******//
 
 #portraetmode {
-  background-color: #bf8b2ab2;
+  background-color: rgba(0, 0, 0, 0.904);
+  background-position: cover;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  text-align: center;
+  z-index: 1000;
   display: none;
+}
+
+#portraet_tekst:first-child {
+  margin-top: 80%;
 }
 
 body {
@@ -116,14 +137,14 @@ header {
   display: grid;
   grid-template-columns: 1.5fr 2fr 2.5fr;
   grid-gap: 2vw;
-  margin-bottom: 7vh;
+  margin-bottom: 2vh;
 }
 
 #bottom {
   display: grid;
   grid-template-columns: 2.5fr 3fr;
   grid-gap: 2vw;
-  margin-bottom: 6vh;
+  margin-bottom: 2vh;
 }
 
 .col-sm,
@@ -131,7 +152,7 @@ header {
 .col-sm2 {
   display: flex;
   align-items: start;
-  height: 100%;
+  height: 90%;
   padding: 2vh 1vw;
   background-color: var(--dark_overlay);
   border-radius: 25px;
@@ -152,20 +173,8 @@ header {
   min-height: 100%;
 }
 
-// @media screen and (max-width: 420px) {
-//   #top {
-//     display: flex;
-//     flex-direction: column;
-//     margin-bottom: 2vh;
-//   }
-
-//   #bottom {
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .col-sm,
-//   .col-sm1,
-//   .col-sm2 {
-//     margin-bottom: 2vh;
-//   }
-// }
+@media (orientation: portrait) {
+  #portraetmode {
+    display: unset;
+  }
+}

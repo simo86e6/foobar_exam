@@ -1,7 +1,3 @@
-// #ready_orders {
-//   padding: 1vw;
-// }
-
 #ready_orders h3 {
   margin-bottom: 3vh;
   // font-size: 0.8rem;
@@ -17,14 +13,9 @@
 #order_finished {
   display: flex;
   flex-direction: row;
-  margin-bottom: 8vh;
+  margin-bottom: 6vh;
   /* justify-content: space-between; */
 }
-
-// #order_queue,
-// #order_in_progress {
-//   margin-bottom: 8vh;
-// }
 
 .highlight {
   color: red;
