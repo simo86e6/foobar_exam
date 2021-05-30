@@ -3,7 +3,6 @@
   background-color: unset;
   justify-content: space-between;
   padding: 2vh;
-  width: 93vw;
 }
 
 #bekraeftelse {
@@ -64,6 +63,10 @@
   padding: 2vh 4vh;
 }
 
+#bekraeftelse #nav_icon {
+  margin-top: 0;
+}
+
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
@@ -85,10 +88,51 @@
 
 //tablet
 @media screen and (min-width: 768px) {
+  #bekraeftelse h1 {
+    font-size: 5rem;
+    margin-top: 3vh;
+  }
+
+  #bekraeftelse h2 {
+    font-size: 4vh;
+  }
+
+  #bekraeftelse h3 {
+    font-size: 4rem;
+  }
+
+  #bekraeftelse button {
+    margin-top: 3vh;
+  }
+
+  #bekraeftelse p {
+    font-size: 1.2rem;
+  }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
+  #bekraeftelse h1 {
+    font-size: 7rem;
+    margin-top: 3vh;
+  }
+
+  #bekraeftelse h5 {
+    font-size: 2.5rem;
+  }
+
+  #bekraeftelse h3 {
+    font-size: 6rem;
+  }
+
+  #bekraeftelse p {
+    font-size: 1.6rem;
+    margin-top: 0vh;
+  }
+
+  #bekraeftelse h4 {
+    font-size: 1.2rem;
+  }
 }
 
 //laptop L
