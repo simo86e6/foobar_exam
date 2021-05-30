@@ -20,14 +20,18 @@ let completedOrders = [];
 // localStorage.clear();
 
 
+setOrderNumber();
 updateCompletedOrders();
 addOrderToStorage();
 
-
+function setOrderNumber(){
+    debugger;
+    let orderNumber = JSON.parse(sessionStorage.getItem("orderId"));
+    document.querySelector("#show_order_number").innerHTML = orderNumber;
+}
 
 function updateCompletedOrders(){
     if ("completedOrders" in localStorage){
-        debugger;
         let localStorageOrders = JSON.parse(localStorage.getItem("completedOrders"));
         localStorageOrders.forEach(completedOrder => {
             completedOrders.push(completedOrder);
