@@ -103,12 +103,17 @@ p#amount_in_basket {
   background-color: green;
   border-radius: 8vh;
   position: absolute;
-  right: 1%;
-  padding: 0.8vh;
+  right: 1.5%;
+  top: 7%;
+  padding: 0.1vh 0.8vh;
+  font-size: 1.9vh;
 }
-
 #menu_page #nav_icon {
   margin-top: 0;
+}
+
+#menu_page h1 {
+  color: white;
 }
 //------------------------------------------//
 //                 MEDIAQUIRES             //
@@ -120,6 +125,10 @@ p#amount_in_basket {
 
 //mobile L
 @media screen and (min-width: 425px) {
+  p#amount_in_basket {
+    right: 2.5%;
+    top: 7%;
+  }
 }
 
 //tablet
@@ -140,14 +149,16 @@ p#amount_in_basket {
   }
 
   p#amount_in_basket {
-    right: 2%;
+    right: 2.7%;
+    top: -2%;
   }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
   p#amount_in_basket {
-    right: 2.5%;
+    right: 2.7%;
+    top: -8%;
   }
 }
 
@@ -155,6 +166,7 @@ p#amount_in_basket {
 @media screen and (min-width: 1440px) {
   p#amount_in_basket {
     right: 3%;
+    top: -2%;
   }
 }
 
