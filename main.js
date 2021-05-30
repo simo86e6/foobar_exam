@@ -52,7 +52,7 @@ function displayStats(barStats){
     updateQueue(barStats);
     updateOrders(barStats);
     updateStorage(barStats);
-    updateTime(barStats);
+    // updateTime(barStats);
      
     setTimeout(getData, 1000);
    
@@ -131,6 +131,10 @@ function updateQueue(barStats){
 }
 // Denne funktion viser dataerne som står under "Bestillinger" på dashboardet
 function updateOrders(barStats){
+    let highlightOrder = "";
+    if ("orderId" in sessionStorage){
+        highlightOrder = parseInt(sessionStorage.getItem("orderId"));
+    }
     document.getElementById("order_queue").innerHTML = "";
     document.getElementById("order_in_progress").innerHTML = "";
     document.getElementById("order_finished").innerHTML = "";
@@ -140,12 +144,15 @@ function updateOrders(barStats){
     //Denne del tager sig af at vise de bestillinger som er i kø
     let queueCount = 0;
     orderQueueList.forEach(order => {
-        if(queueCount < 1){
+        if(queueCount < 5){
             const pTag = document.createElement("p");
+            if(highlightOrder === order.id){
+                pTag.classList.add("highlight");
+            }
             pTag.innerHTML = order.id;
             document.getElementById("order_queue").appendChild(pTag);
             queueCount++;
-        } else if(queueCount == 1){
+        } else if(queueCount == 5){
             const pTag = document.createElement("p");
             pTag.innerText = "...";
             document.getElementById("order_queue").appendChild(pTag);
@@ -157,6 +164,9 @@ function updateOrders(barStats){
     orderInProgressList.forEach(order => {
 
         const pTag = document.createElement("p");
+        if(highlightOrder === order.id){
+            pTag.classList.add("highlight");
+        }
         pTag.innerHTML = order.id;
         document.getElementById("order_in_progress").appendChild(pTag);
         if(!orderFinishedList.includes(order.id)){
@@ -178,6 +188,9 @@ function updateOrders(barStats){
         if(!temp.includes(id.toString())){
             if(finishedCount < 5){
                 const pTag = document.createElement("p");
+                if(highlightOrder === id){
+                    pTag.classList.add("highlight");
+                }
                 pTag.innerHTML = id;
                 document.getElementById("order_finished").appendChild(pTag);
                 finishedCount++;
@@ -191,29 +204,7 @@ function updateOrders(barStats){
 }
 
 //Denne funtion får de analog ur til at gå efter normaltid
-function updateTime(barStats){
-    let hourHand = document.getElementById("hourHand");
-    let minuteHand = document.getElementById("minuteHand");
-    let secondHand = document.getElementById("secondHand");
-
-    let date = new Date();
-    let hour = date.getHours() % 12;
-    let minute = date.getMinutes();
-    let second = date.getSeconds();
-
-    let hourDeg = hour * 30;
-    let minuteDeg = minute * 6;
-    let secondDeg = second * 6;
-
-    hourHand.style.transform = "rotate(" + hourDeg + "deg)";
-    minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
-    secondHand.style.transform = "rotate(" + secondDeg + "deg)";
-
-  
-
-}
-
-
+// 
 
 const deg = 6;
                   const hr = document.querySelector('#hr');
