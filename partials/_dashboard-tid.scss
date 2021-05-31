@@ -10,12 +10,6 @@
   text-align: center;
 }
 
-#clock h3 {
-  font-family: var(--handwritten_font);
-  font-size: 1rem;
-  margin-top: 2vh;
-}
-
 .clock {
   display: flex;
   width: 110px;
@@ -104,32 +98,94 @@
   border-radius: 6px 6px 0 0;
 }
 
-// .row:after {
-//   content: "";
-//   display: table;
-//   clear: both;
-//   display: flex;
-// }
+//IPAD
+@media screen and (min-width: 1000px) {
+  .clock {
+    width: 160px;
+    height: 160px;
+  }
 
-// .col-sm {
-//   float: left;
-//   width: 33.33%;
-//   text-align: center;
-//   display: flex;
-//   flex-direction: row;
-// }
+  .clock:before {
+    width: 5px;
+    height: 5px;
+  }
 
-// .col-sm1 {
-//   float: left;
-//   width: 33.33%;
-//   text-align: center;
-//   position: relative;
-//   margin-top: 50px;
-// }
+  .clock .hour,
+  .hr {
+    width: 80px;
+    height: 80px;
+  }
 
-// .col-sm2 {
-//   float: left;
-//   width: 66.33%;
-//   margin-left: 5px;
-//   margin-top: 50px;
-// }
+  .clock .min,
+  .mn {
+    width: 125px;
+    height: 125px;
+  }
+
+  .clock .sec,
+  .sc {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hr:before {
+    width: 3px;
+    height: 40px;
+  }
+
+  .mn:before {
+    width: 3px;
+    height: 65px;
+  }
+
+  .sc:before {
+    width: 1px;
+    height: 70px;
+  }
+}
+
+//MINDRE COMPUTER
+@media screen and (min-width: 1240px) {
+  .clock {
+    width: 190px;
+    height: 190px;
+  }
+
+  .clock:before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .clock .hour,
+  .hr {
+    width: 90px;
+    height: 90px;
+  }
+
+  .clock .min,
+  .mn {
+    width: 150px;
+    height: 150px;
+  }
+
+  .clock .sec,
+  .sc {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hr:before {
+    width: 4px;
+    height: 45px;
+  }
+
+  .mn:before {
+    width: 4px;
+    height: 75px;
+  }
+
+  .sc:before {
+    width: 2px;
+    height: 80px;
+  }
+}

@@ -36,11 +36,6 @@
   margin-bottom: 1vh;
 }
 
-.col_left h3 {
-  font-family: var(--handwritten_font);
-  margin-top: 2vh;
-}
-
 .col_right {
   display: grid;
 
@@ -63,4 +58,11 @@
 
 .hide {
   display: none;
+}
+
+//IPAD
+@media screen and (min-width: 1000px) {
+  .col_left {
+    margin-top: -5vh;
+  }
 }
