@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>form_menu</title>
-<script type="module" crossorigin src="./assets/menu.aca0c5f2.js"></script>
-  <link rel="modulepreload" href="./assets/form.a6cb3770.js">
-  <link rel="stylesheet" href="./assets/style_form.682b52b2.css">
+<script type="module" crossorigin src="./assets/menu.672a3314.js"></script>
+  <link rel="modulepreload" href="./assets/form.c72db5b2.js">
+  <link rel="stylesheet" href="./assets/style_form.f6715400.css">
 </head>
-<body id="menu_page">
+<body id="menu_page" class="lightmode">
     <nav>
         <div id="top_nav">
             <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon">
             <h1 id="logo">FOOBAR</h1>
+            <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
             <p id="amount_in_basket">0</p>
              <i class='fa fa-shopping-basket link_basket'></i>
         </div>
@@ -38,7 +40,7 @@
                 
             </div>
             <div id="beer_btns">
-                <div id="btns_container">
+                <div id="btns_container" >
                     <button class="counter_minus">-</button>
                     <p class="counter_display"></p>
                     <button class="counter_plus">+</button>
@@ -101,7 +103,11 @@
          </div>
      </footer>
 
-
+     <script>
+         function myFunction(x) {
+  x.classList.toggle("fa-toggle-on");
+}
+     </script>
     
     
 </body>

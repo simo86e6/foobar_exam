@@ -61,7 +61,7 @@ function updateBartenders(barStats){
 
     for (let i = 0; i < bartenderContents.length; i++) {
         
-        bartenderContents[i].querySelector('.each_bartender').src = "/img/" + barStats.bartenders[i].name + ".png";
+        bartenderContents[i].querySelector('.each_bartender').src = "../img/" + barStats.bartenders[i].name + ".png";
         bartenderContents[i].querySelector('.bartender_name').textContent = barStats.bartenders[i].name;
         // bartenderContents[i].querySelector('.bartender_status').textContent = barStats.bartenders[i].status;
         if(barStats.bartenders[i].statusDetail === "receivePayment"){
@@ -100,7 +100,7 @@ function initBartenders(barStats){
     barStats.bartenders.forEach(bartender => {
         const clone = document.querySelector(".temp_bartenders").content.cloneNode(true);
         // clone.querySelector(".content").classList.add("show_" + bartender.name);
-        clone.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
+        clone.querySelector(".each_bartender").src = "../img/" + bartender.name + ".png";
         clone.querySelector(".bartender_name").textContent = bartender.name;
         // clone.querySelector(".bartender_status").textContent = bartender.status;
         clone.querySelector(".bartender_statusdetail").textContent = bartender.statusDetail;
@@ -134,7 +134,7 @@ function updateQueue(barStats){
         
     const img = document.createElement("img");
     img.className = "beer_picture";
-    img.src = "/img/beer-mug.png";
+    img.src = "../img/beer-mug.png";
     document.getElementById("beer_pictures").appendChild(img);
     }
 
@@ -290,7 +290,7 @@ function msToTime(s) {
         let kegElementId = "stock" + i + "_kegs";
         let imgElementId = "stock" + i + "_img";
 
-        let imgSrc = "/img/kegs/" + lowestLevels[i].beer + ".png";
+        let imgSrc = "../img/kegs/" + lowestLevels[i].beer + ".png";
         document.getElementById(imgElementId).src = imgSrc;
         document.getElementById(nameElementId).innerHTML = lowestLevels[i].beer;
         document.getElementById(levelElementId).innerHTML = lowestLevels[i].level;
