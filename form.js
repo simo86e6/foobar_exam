@@ -39,13 +39,15 @@ async function getData() {
   }
 
   function redirectToBasket(){
+    //få fat i alle links som linker til kurven.
       let links = document.querySelectorAll(".link_basket");
       links.forEach(link => {
+        //tilføj eventListener til linkne som tager det udfyldte beerList array
+        //og laver det om til en string (så sessionStorage kan benytte sig af det)
+        //så bliver der oprettet en ny item til sessionStorage med value af beerListen
         link.addEventListener("click", function(){
-          debugger;
           let beerListString = JSON.stringify(beerList);
           sessionStorage.setItem("selectedBeers", beerListString);
-          console.log(JSON.parse(sessionStorage.getItem("selectedBeers")));
           window.location.href = "kurv.html";
         });
       });
@@ -55,6 +57,8 @@ async function getData() {
     console.log("fetchList");
     debugger;
     document.querySelector(".beer_container").innerHTML = "";
+    //check om der allerede findes en sessionStorage med key - selectedBeers
+    //hvis der gør, så genbrug den beerList. ellers så opret en ny tom beerList.
     if ("selectedBeers" in sessionStorage) {
       beerList = JSON.parse(sessionStorage.getItem("selectedBeers"));
       let amount = 0;
@@ -71,6 +75,8 @@ async function getData() {
     updateBeerAmount(barStats);
 }
 
+//Her sætter vi værdien isOnTap på øl objekterne til true/false
+//Alt efter om øllen er på tap lige nu og her.
 function beersOnTap(barStats){
   let taps = barStats.taps;
   taps.forEach(tap => {
@@ -83,7 +89,9 @@ function updateBeerAmount(){
     document.querySelector(".beer_container").innerHTML = "";
     beerList.forEach(displayBeers);
 }
-
+//Her laver vi vores øl objekter ud fra den skabelon som vi har lavet øverst oppe.
+//Når et øl objekt er blevet lavet, så så det udfyldt sine værdier.
+//Samt tilføjet til beerList arrayet.
 function createBeerObject(data){
     let beer = Object.create(Beer);
     beer.amount = 0;

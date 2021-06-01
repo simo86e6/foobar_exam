@@ -7,11 +7,11 @@ import './style_form.scss'
 basketSetup();
 
 function basketSetup(){
-    let beers = JSON.parse(sessionStorage.getItem("selectedBeers"));
+    let beerList = JSON.parse(sessionStorage.getItem("selectedBeers"));
     let amountOfOrders = 0;
     let totalPrice = 0;
     
-    beers.forEach(beerOrder => {
+    beerList.forEach(beerOrder => {
         if(beerOrder.amount != 0){
             amountOfOrders += beerOrder.amount;
             totalPrice += showOrder(beerOrder);
