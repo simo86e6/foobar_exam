@@ -23,7 +23,7 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: var(--yellow);
-  line-height: 1;
+  font-size: 5vh;
 }
 
 h2 {
@@ -31,9 +31,8 @@ h2 {
   font-weight: 700;
   font-style: normal;
   color: var(--yellow);
-  line-height: 1;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 1vh;
   margin-bottom: 4vh;
 }
@@ -43,7 +42,6 @@ h3 {
   font-weight: 600;
   font-style: normal;
   color: var(--yellow);
-  line-height: 1;
   font-size: 0.8rem;
 }
 
@@ -51,46 +49,30 @@ h4 {
   font-family: var(--sansserif_font);
   font-style: bold;
   color: var(--yellow);
-  line-height: 1;
 }
 
 p {
   font-family: var(--sansserif_font);
   font-style: normal;
   color: white;
-  line-height: 1;
   font-weight: 700;
   font-size: 0.8rem;
-}
-
-label {
-  color: var(--yellow);
-  font-family: var(--sansserif_font);
-  font-weight: 700;
-  font-size: 1.2rem;
 }
 
 .fa-gear::before,
 .fa-cog::before {
   color: var(--yellow);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 #countdown {
   color: white;
   font-family: var(--sansserif_font);
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-#content h3 {
-  font-size: 0.6rem;
+  margin-bottom: 2vh;
 }
 
 #clock h3 {
   font-family: var(--handwritten_font);
-  font-size: 1rem;
-  margin-top: 2vh;
 }
 
 .col_left h3 {
@@ -103,12 +85,15 @@ label {
   margin-left: 2vw;
 }
 
+.bartender_name {
+  font-size: 1rem;
+}
+
 #portraet_tekst {
   font-family: var(--handwritten_font);
   font-weight: 900;
   font-style: normal;
   color: white;
-  line-height: 1;
   text-align: center;
 }
 
@@ -142,7 +127,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 #top {
@@ -178,11 +163,15 @@ header {
 
 #clock,
 #ready_orders,
-#storage,
+#storage {
+  width: 100%;
+  height: 55vh;
+}
+
 #queue,
 #bartenders {
   width: 100%;
-  min-height: 100%;
+  height: 25vh;
 }
 
 @media (orientation: portrait) {
@@ -191,12 +180,38 @@ header {
   }
 }
 
+//SMALL PHONE
+@media screen and (max-width: 570px) {
+  #clock,
+  #ready_orders,
+  #storage {
+    height: 60vh;
+  }
+
+  #queue,
+  #bartenders {
+    height: 25vh;
+  }
+}
+
+//BIG PHONE
+@media screen and (min-width: 800px) {
+  #queue,
+  #bartenders {
+    height: 30vh;
+  }
+}
+
 //IPAD
 @media screen and (min-width: 1000px) {
   //FONTS
 
+  h1 {
+    font-size: 4vh;
+  }
+
   h2 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     margin-top: 1vh;
     margin-bottom: 4vh;
   }
@@ -211,34 +226,115 @@ header {
 
   .fa-gear::before,
   .fa-cog::before {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
-  #countdown {
-    font-size: 1.4rem;
-  }
-
-  #content h3 {
-    font-size: 1rem;
-  }
-
-  #clock h3 {
+  .bartender_name {
     font-size: 1.4rem;
   }
 
   //GENEREL
-  .col-sm,
-  .col-sm1,
-  .col-sm2 {
-    height: 85%;
+
+  header {
+    margin-bottom: 3vh;
   }
 
-  .col-sm1,
-  .col-sm2 {
-    height: 110%;
+  #clock,
+  #ready_orders,
+  #storage {
+    height: 50vh;
   }
 
-  #top {
-    margin-bottom: -1.5vh;
+  #queue,
+  #bartenders {
+    height: 25vh;
+  }
+}
+
+//1280 - 800
+@media screen and (min-width: 1260px) {
+  //FONTS
+  h2 {
+    font-size: 2rem;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .fa-gear::before,
+  .fa-cog::before {
+    font-size: 1.8rem;
+  }
+
+  .bartender_name {
+    font-size: 1.8rem;
+  }
+
+  //GENEREL
+  #clock,
+  #ready_orders,
+  #storage {
+    height: 47vh;
+  }
+
+  #queue,
+  #bartenders {
+    height: 26vh;
+  }
+}
+
+//1920 - 1080
+@media screen and (min-width: 1900px) {
+  //FONTS
+
+  h1 {
+    font-size: 4vh;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .fa-gear::before,
+  .fa-cog::before {
+    font-size: 2.6rem;
+  }
+
+  .bartender_name {
+    font-size: 2rem;
+  }
+
+  //GENEREL
+
+  header {
+    margin-bottom: 3vh;
+  }
+
+  #clock,
+  #ready_orders,
+  #storage {
+    height: 48vh;
+  }
+
+  #queue,
+  #bartenders {
+    height: 27vh;
   }
 }

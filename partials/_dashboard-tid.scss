@@ -6,7 +6,7 @@
 }
 
 #countdown_text {
-  margin-top: 8vh;
+  margin-top: 7vh;
   text-align: center;
 }
 
@@ -100,6 +100,10 @@
 
 //IPAD
 @media screen and (min-width: 1000px) {
+  #countdown_text {
+    margin-top: 8vh;
+  }
+
   .clock {
     width: 160px;
     height: 160px;
@@ -187,5 +191,51 @@
   .sc:before {
     width: 2px;
     height: 80px;
+  }
+}
+
+//1920 - 1080
+@media screen and (min-width: 1900px) {
+  .clock {
+    width: 290px;
+    height: 290px;
+  }
+
+  .clock:before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .clock .hour,
+  .hr {
+    width: 130px;
+    height: 130px;
+  }
+
+  .clock .min,
+  .mn {
+    width: 190px;
+    height: 190px;
+  }
+
+  .clock .sec,
+  .sc {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hr:before {
+    width: 4px;
+    height: 70px;
+  }
+
+  .mn:before {
+    width: 4px;
+    height: 100px;
+  }
+
+  .sc:before {
+    width: 2px;
+    height: 105px;
   }
 }

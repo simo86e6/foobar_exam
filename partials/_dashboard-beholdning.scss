@@ -30,3 +30,16 @@
   font-family: var(--handwritten_font);
   margin-bottom: 4vh;
 }
+
+#storage img {
+  width: auto;
+  height: 27vh;
+}
+
+//IPAD
+@media screen and (min-width: 1000px) {
+  #storage img {
+    width: auto;
+    height: 20vh;
+  }
+}

@@ -1,6 +1,8 @@
 "use strict";
 import './styles.scss'
 
+window.addEventListener("DOMContentLoaded", getData);
+
 const barStatsUrl = "https://foobar-examproject.herokuapp.com/";
 
 let orderFinishedList = [];
@@ -8,11 +10,6 @@ let orderQueueList = [];
 let orderInProgressList = [];
 
 let counter = 0;
-
-
-
-
-getData();
 
 async function getData(){
    
@@ -66,12 +63,28 @@ function updateBartenders(barStats){
         
         bartenderContents[i].querySelector('.each_bartender').src = "/img/" + barStats.bartenders[i].name + ".png";
         bartenderContents[i].querySelector('.bartender_name').textContent = barStats.bartenders[i].name;
-        bartenderContents[i].querySelector('.bartender_status').textContent = barStats.bartenders[i].status;
-        bartenderContents[i].querySelector('.bartender_statusdetail').textContent = barStats.bartenders[i].statusDetail;
+        // bartenderContents[i].querySelector('.bartender_status').textContent = barStats.bartenders[i].status;
+        if(barStats.bartenders[i].statusDetail === "receivePayment"){
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Recieving payment";
+        } else if (barStats.bartenders[i].statusDetail === "pourBeer") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Pouring beer";
+        } else if (barStats.bartenders[i].statusDetail === "waiting") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Waiting";
+        } else if (barStats.bartenders[i].statusDetail === "startServing") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Started serving";
+        } else if (barStats.bartenders[i].statusDetail === "reserveTap") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Reserving tap";
+        } else if (barStats.bartenders[i].statusDetail === "releaseTap") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Releasing tap";
+        } else if (barStats.bartenders[i].statusDetail === "endServing") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Finished serving";
+        } else if (barStats.bartenders[i].statusDetail === "replaceKeg") {
+            bartenderContents[i].querySelector('.bartender_statusdetail').textContent = "Replacing Keg";
+        }
 
         let tap = barStats.bartenders[i].usingTap
         if(tap === null){
-            bartenderContents[i].querySelector('.bartender_usingtap').textContent = "N/A";
+            bartenderContents[i].querySelector('.bartender_usingtap').textContent = "Not pouring";
         } else {
             bartenderContents[i].querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
         }
@@ -89,12 +102,12 @@ function initBartenders(barStats){
         // clone.querySelector(".content").classList.add("show_" + bartender.name);
         clone.querySelector(".each_bartender").src = "/img/" + bartender.name + ".png";
         clone.querySelector(".bartender_name").textContent = bartender.name;
-        clone.querySelector(".bartender_status").textContent = bartender.status;
+        // clone.querySelector(".bartender_status").textContent = bartender.status;
         clone.querySelector(".bartender_statusdetail").textContent = bartender.statusDetail;
 
         let tap = bartender.usingTap
         if(tap === null){
-            clone.querySelector(".bartender_usingtap").textContent = "N/A";
+            clone.querySelector(".bartender_usingtap").textContent = "Not pouring";
         } else {
             clone.querySelector(".bartender_usingtap").textContent = barStats.taps[tap].beer;
         }
@@ -242,12 +255,20 @@ function updateCountdown(barStats){
 }
 // Denne funktion nedbryder millisekunder til timer:minutter:sekunder som updateCountdown() bruger
 function msToTime(s) {
+
     var ms = s % 1000;
     s = (s - ms) / 1000;
     var secs = s % 60;
     s = (s - secs) / 60;
     var mins = s % 60;
     var hrs = (s - mins) / 60;
+
+
+    //HVIS SEK, MIN ELLER HR ER UNDER 10, TILFØJ 0
+    // if(){
+    // } else if(){
+
+    // }
   
     return hrs + ':' + mins + ':' + secs;
   }
