@@ -9,7 +9,7 @@
     
     <title>form_menu</title>
 </head>
-<body id="menu_page" class="lightmode">
+<body id="menu_page">
     <nav>
         <div id="top_nav">
             <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon">
@@ -100,14 +100,20 @@
          </div>
      </footer>
 
+     <script type="module" src="/kurv.js"></script>
+
      <script>
          function myFunction(x) {
-  x.classList.toggle("fa-toggle-on");
-}
+            x.classList.toggle("fa-toggle-on");
+ 
+            if (document.body.hasAttribute('data-theme', 'light')) {
+             document.body.removeAttribute('data-theme', 'light');
+            }else {
+             document.body.setAttribute('data-theme', 'light');
+          }
+            console.log("jegvirker");
+            }
      </script>
-    <script type="module" src="/form.js">
-    
-</script>
     
 </body>
 </html>
