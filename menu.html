@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>form_menu</title>
 </head>
 <body id="menu_page" class="lightmode">
@@ -13,6 +14,7 @@
         <div id="top_nav">
             <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon">
             <h1 id="logo">FOOBAR</h1>
+            <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
             <p id="amount_in_basket">0</p>
              <i class='fa fa-shopping-basket link_basket'></i>
         </div>
@@ -99,7 +101,11 @@
      </footer>
 
 
-    <script type="module" src="/form.js"></script>
+    <script type="module" src="/form.js">
+    function myFunction(x) {
+        x.classList.toggle("fa-toggle-on");
+    }
+</script>
     
 </body>
 </html>
