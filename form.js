@@ -37,7 +37,7 @@ async function getData() {
     fetchList(beerInfo, barStats);
     redirectToBasket();
   }
-
+  // Når der bliver klikket på kurven i toppen af siden/ bunden af siden
   function redirectToBasket(){
     //få fat i alle links som linker til kurven.
       let links = document.querySelectorAll(".link_basket");
