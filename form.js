@@ -100,7 +100,7 @@ function createBeerObject(data){
     beer.flavor = data.description.flavor;
     beer.overall = data.description.overallImpression;
     beer.mouthfeel = data.description.mouthfeel;
-    beer.picture = "img/glass/" + data.label;
+    beer.picture = "../img/glass/" + data.label;
     beerList.push(beer);
 }
 
