@@ -1,3 +1,13 @@
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
 //----------MENU-----------------//
 
 #menu_page {
@@ -115,6 +125,7 @@ p#amount_in_basket {
 #menu_page h1 {
   color: white;
 }
+
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//

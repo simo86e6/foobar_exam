@@ -1,5 +1,5 @@
 #kurv .cart_summary {
-  margin-top: 20vh;
+  margin-top: 23vh;
   text-align: center;
   margin-bottom: 20vh;
 }
@@ -15,21 +15,26 @@
 
 #kurv button {
   min-width: 25vw;
+  padding: 2.3vh 4.5vh;
 }
 
 #kurv #beer {
   align-self: center;
 }
 
-#kurv #beer_box {
+#kurv_page #beer_box {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr 0.6fr;
   justify-items: center;
 }
 
 #kurv_page #beer_info {
+  margin-top: unset;
+}
+
+#kurv_page #beer_info h2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-items: center;
 }
 
@@ -55,6 +60,11 @@
   line-height: 1.5;
   font-size: 0.8rem;
   text-align: start;
+}
+
+#kurv_page p.head2 {
+  font-family: var(--handwritten_font);
+  color: var(--yellow);
 }
 
 //------------------------------------------//
@@ -89,10 +99,39 @@
   #kurv_page #beer_btns p {
     font-size: 1.8rem;
   }
+
+  #kurv_page #left_column h2 {
+    margin-top: 4vh;
+  }
+
+  #kurv_page #price_total p {
+    font-size: 1.5rem;
+    margin-top: 6vh;
+  }
+
+  #kurv_page p.head2 {
+    font-size: 1.7rem;
+    margin-top: -3vh;
+  }
 }
 
 //laptop
 @media screen and (min-width: 1024px) {
+  #kurv .cart_summary {
+    margin-top: 17vh;
+  }
+
+  #kurv_page #beer_info h3 {
+    margin-top: 1vh;
+  }
+
+  #kurv_page p.head2 {
+    font-size: 1.7rem;
+    margin-top: -2vh;
+  }
+  #kurv button {
+    min-width: 16vh;
+  }
 }
 
 //laptop L

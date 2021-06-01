@@ -22,8 +22,6 @@ let Beer = {
   isOnTap: false
 }
 
-
-
 getData();
 
 
@@ -55,7 +53,7 @@ async function getData() {
   
   function fetchList(beerInfo, barStats) {
     console.log("fetchList");
-    debugger;
+  
     document.querySelector(".beer_container").innerHTML = "";
     //check om der allerede findes en sessionStorage med key - selectedBeers
     //hvis der gør, så genbrug den beerList. ellers så opret en ny tom beerList.
@@ -147,7 +145,7 @@ function createBeerObject(data){
         clone.querySelector(".add_to_basket").textContent = "Not on tap";
       } else {
         clone.querySelector("#test").addEventListener("click", function () {
-          debugger;
+      
           let counterDisplayParent = this.previousElementSibling;
           let counterDisplay = counterDisplayParent.children[1];
           beerObject.amount += parseInt(counterDisplay.innerHTML);

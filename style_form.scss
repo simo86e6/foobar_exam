@@ -12,6 +12,9 @@
 }
 
 //-----------Generel----------------//
+
+/// toggle button
+
 button {
   cursor: pointer;
   height: 4vh;
@@ -173,6 +176,56 @@ label {
   font-size: 1.2rem;
 }
 
+p p {
+  color: black;
+}
+
+//------------------------------------------//
+//                 LIGHT MODE              //
+//----------------------------------------//
+
+//menu
+.lightmode #beer_info h2,
+.lightmode h2.basket_total_orders,
+.lightmode #bekraeftelse h1 {
+  border-color: #6b4f0c;
+  color: #6b4f0c;
+}
+
+//menu
+.lightmode #btns_container button,
+.lightmode .add_to_basket,
+.lightmode #button_container button,
+button.link_basket.lightmode
+//kurv
+.cart_summary .lightmode button,
+.lightmode #buy_button button,
+//bekraeftelse
+.lightmode #bekraeftelse button {
+  border-color: #6b4f0c;
+}
+
+//menu
+.lightmode p.alcohol_procent,
+.lightmode h3.beer_price,
+.lightmode #btns_container button,
+.lightmode #btns_container p,
+.lightmode .add_to_basket,
+.lightmode .collapsible,
+button.link_basket.lightmode,
+//kurv
+.lightmode p.basket_amount,
+.lightmode .basket_line_total,
+.lightmode p,
+.lightmode span.total_amount_right.title,
+.lightmode #buy_button button,
+//bekraeftelse
+.lightmode #bekraeftelse h2,
+.lightmode #bekraeftelse h4,
+.lightmode #bekraeftelse h5,
+.lightmode #bekraeftelse button {
+  color: black;
+}
 //------------------------------------------//
 //        GLOBAL NAVBAR MEDIAQUIRES        //
 //----------------------------------------//
