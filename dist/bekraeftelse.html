@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-<script type="module" crossorigin src="./assets/bekraeftelse.e75560c1.js"></script>
-  <link rel="stylesheet" href="./assets/style_form.f6715400.css">
+<script type="module" crossorigin src="./assets/bekraeftelse.52f42d6d.js"></script>
+  <link rel="stylesheet" href="./assets/style_form.6f3dedd3.css">
 </head>
-<body id="bekraeftelse" class="lightmode">
+<body id="bekraeftelse">
     <nav>
         <div id="top_nav">
             <div class="dropdown">
@@ -21,7 +21,7 @@
                 <p>DIT BESTILLINGSNUMMER</p>
               </div>
           </div>
-              
+          <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
               <i class='fa fa-shopping-basket'></i>
           </div>
     </nav>
@@ -40,5 +40,17 @@
     
 
     
+    <script>
+        function myFunction(x) {
+           x.classList.toggle("fa-toggle-on");
+
+           if (document.body.hasAttribute('data-theme', 'light')) {
+            document.body.removeAttribute('data-theme', 'light');
+           }else {
+            document.body.setAttribute('data-theme', 'light');
+         }
+           console.log("jegvirker");
+           }
+    </script>
 </body>
 </html>

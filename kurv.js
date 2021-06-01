@@ -7,6 +7,7 @@ import './style_form.scss'
 basketSetup();
 
 function basketSetup(){
+    debugger;
     let beerList = JSON.parse(sessionStorage.getItem("selectedBeers"));
     let amountOfOrders = 0;
     let totalPrice = 0;

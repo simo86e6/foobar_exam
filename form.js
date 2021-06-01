@@ -7,7 +7,6 @@ const barStatsUrl = "https://foobar-examproject.herokuapp.com/";
 let beerList = [];
 let beerNamesOnTap = [];
 
-
 let Beer = {
   name: "",
   price: "",
