@@ -22,7 +22,6 @@ let Beer = {
   isOnTap: false
 }
 
-
 getData();
 
 
