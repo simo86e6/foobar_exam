@@ -1,16 +1,19 @@
 "use strict";
 import './style_form.scss'
 
-
-
-
+let totalPrice = 0;
+document.querySelector("#buy_button").addEventListener("click", redirectPayment);
 basketSetup();
+
+function redirectPayment(){
+    sessionStorage.setItem("totalPrice", totalPrice.toString());
+    window.location.href=("betaling.html");
+}
 
 function basketSetup(){
     debugger;
     let beerList = JSON.parse(sessionStorage.getItem("selectedBeers"));
     let amountOfOrders = 0;
-    let totalPrice = 0;
     
     beerList.forEach(beerOrder => {
         if(beerOrder.amount != 0){

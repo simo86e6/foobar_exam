@@ -5,8 +5,10 @@ const orderUrl = "https://foobar-examproject.herokuapp.com/order";
 
 let herokuOrder = [];
 let restOrder = [];
+document.querySelector("#total_price").innerHTML = sessionStorage.getItem("totalPrice") + " dkk";
 
 let orderedBeers = JSON.parse(sessionStorage.getItem("selectedBeers"));
+document.querySelector("#finalize_purches").addEventListener("click", formFilledCheck);
 
 
 document.querySelector("#month").addEventListener("keypress", monthInputHandler);
@@ -17,9 +19,45 @@ document.querySelector("#number").addEventListener("keypress", cardNumberHandler
 formatToHeroku();
 formatToRest();
 
-// function formFilledCheck(){
+function formFilledCheck(event){
 
-// }
+  let isNameFilled = false;
+  let nameValue = document.querySelector("#full_name").value;
+  if(nameValue != ""){
+    isNameFilled = true;
+  }
+
+  let isCardNumberFilled = false;
+  let CardNumberValue = document.querySelector("#number").value;
+  if(CardNumberValue.length == 19){
+    isCardNumberFilled = true;
+  }
+
+  let isMonthFilled = false;
+  let monthValue = document.querySelector("#month").value;
+  if(monthValue.length == 2){
+    isMonthFilled = true;
+  }
+
+  let isYearFilled = false;
+  let yearValue = document.querySelector("#year").value;
+  if(yearValue.length == 2){
+    isYearFilled = true;
+  }
+
+  let isSecureFilled = false;
+  let secureValue = document.querySelector("#secure").value;
+  if(secureValue.length == 3){
+    isSecureFilled = true;
+  }
+
+  if(isNameFilled && isCardNumberFilled && isMonthFilled && isYearFilled && isSecureFilled){
+    debugger;
+    event.preventDefault();
+    postHeroku()
+  }
+
+}
 
 function cardNumberHandler(event){
 
@@ -130,10 +168,8 @@ orderedBeers.forEach(beer => {
 
 }
 
-document.querySelector("#finalize_purches").addEventListener("click", postHeroku);
-
-
 async function postHeroku() {
+  debugger;
     let herokuOrderString = JSON.stringify(herokuOrder);
 
     let postOrder = await fetch(orderUrl, {
@@ -156,7 +192,8 @@ async function postHeroku() {
     let payload = {
       order: restOrder,
       name: "Simone",
-      orderId: orderId
+      orderId: orderId,
+      subTotal: sessionStorage.getItem("totalPrice")
     }
 
     let url = "https://foobar-4ea8.restdb.io/rest/receipt";
@@ -172,11 +209,5 @@ async function postHeroku() {
       body: postData,
     });
 
-    debugger;
-    console.log(document.querySelector("#number").value)
-    console.log(document.querySelector("#month").value)
-    console.log(document.querySelector("#year").value)
-
-
-  window.location.href=('bekraeftelse.html');
+    window.location.href=('bekraeftelse.html');
 }
