@@ -54,8 +54,15 @@
   }
 }
 
-//1600
-@media screen and (min-width: 1600px) {
+//1530
+@media screen and (min-width: 1530px) {
+  #queue img {
+    width: 3vw;
+  }
+
+  #beer_pictures {
+    margin-top: 0.5vh;
+  }
 }
 
 //1920 - 1080
@@ -66,5 +73,12 @@
 
   #beer_pictures {
     margin-top: 2vh;
+  }
+}
+
+//3440 - 1040
+@media screen and (min-width: 3440px) {
+  #queue img {
+    width: 2vw;
   }
 }

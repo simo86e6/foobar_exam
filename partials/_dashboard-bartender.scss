@@ -94,8 +94,17 @@
   }
 }
 
-//1600
-@media screen and (min-width: 1600px) {
+//1530
+@media screen and (min-width: 1530px) {
+  #bartenders img {
+    width: 8vw;
+    margin-bottom: 1vh;
+  }
+
+  .col_left {
+    margin-top: -8vh;
+    margin-left: 0.5vw;
+  }
 }
 
 //1920 - 1080
@@ -106,7 +115,15 @@
   }
 
   .col_left {
-    margin-top: -4vh;
+    margin-top: -6vh;
     margin-left: 1.5vw;
+  }
+}
+
+//3440 - 1040
+@media screen and (min-width: 3440px) {
+  #bartenders img {
+    width: 5vw;
+    margin-bottom: 1vh;
   }
 }
