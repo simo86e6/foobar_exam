@@ -53,6 +53,22 @@
   font-weight: 900;
   font-size: 1rem;
   margin-top: 15vh;
+  cursor: pointer;
+}
+
+#btn_dashboard {
+  cursor: pointer;
+  padding-left: 9vh;
+  padding-right: 9vh;
+  border-radius: 24px;
+  border: solid;
+  border-color: var(--yellow);
+  background: transparent;
+  color: white;
+  font-family: "marydale";
+  font-weight: 900;
+  font-size: 0.8rem;
+  margin-top: 10vh;
 }
 
 #form_forside ::before {
