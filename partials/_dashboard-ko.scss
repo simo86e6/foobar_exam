@@ -13,7 +13,7 @@
 }
 
 #queue img {
-  width: 3.5vw;
+  width: 4vw;
   margin-right: 1.5vw;
 }
 
@@ -28,14 +28,14 @@
 //IPAD
 @media screen and (min-width: 1000px) {
   #queue img {
-    width: 3.5vw;
+    width: 5vw;
   }
 }
 
 //1280 - 800
 @media screen and (min-width: 1260px) {
   #queue img {
-    width: 2.8vw;
+    width: 3vw;
   }
 
   #beer_pictures {
@@ -46,7 +46,7 @@
 //1420 - 900
 @media screen and (min-width: 1420px) {
   #queue img {
-    width: 3.5vw;
+    width: 5vw;
   }
 
   #beer_pictures {
@@ -57,7 +57,7 @@
 //1530
 @media screen and (min-width: 1530px) {
   #queue img {
-    width: 3vw;
+    width: 4vw;
   }
 
   #beer_pictures {
@@ -68,7 +68,7 @@
 //1920 - 1080
 @media screen and (min-width: 1900px) {
   #queue img {
-    width: 3.2vw;
+    width: 3.5vw;
   }
 
   #beer_pictures {
@@ -79,6 +79,6 @@
 //3440 - 1040
 @media screen and (min-width: 3400px) {
   #queue img {
-    width: 2vw;
+    width: 4vw;
   }
 }

@@ -17,6 +17,16 @@
   justify-content: space-between;
 }
 
+input#user_name {
+  width: 200px;
+  text-align: center;
+  align-self: center;
+  margin-top: 4rem;
+  font-family: "marydale";
+  border: solid;
+  border-color: var(--yellow);
+}
+
 #content_flex {
   display: flex;
   justify-content: center;
@@ -52,7 +62,7 @@
   font-family: "marydale";
   font-weight: 900;
   font-size: 1rem;
-  margin-top: 15vh;
+  margin-top: 10vh;
   cursor: pointer;
 }
 #form_forside #btn:hover {
