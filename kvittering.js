@@ -1,9 +1,11 @@
 "use strict";
+import './style_form.scss'
+
 
 displayReceipts();
 
 async function displayReceipts(){
-    debugger;
+    // debugger;
     let userName = "Simone";
     let url = 'https://foobar-4ea8.restdb.io/rest/receipt?q={"name": "' + userName +'"}';
     let apiKey = "60b6304c318a330b62f58925";
