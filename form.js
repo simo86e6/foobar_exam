@@ -160,7 +160,7 @@ function createBeerObject(data){
     let notOnTap = document.querySelectorAll(".not_on_tap");
     notOnTap.forEach(tap => {
       tap.innerHTML = "Not on tap";
-      tap
+      
     });
 
 
