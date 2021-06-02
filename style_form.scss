@@ -11,12 +11,14 @@
   --gold: #bf8b2a;
   --white: #ffffff;
   --bgimage: url(/img/dark_background.jpg);
+  --black: #00000098;
 }
 
 [data-theme="light"] {
   --yellow: #6b4f0c;
   --white: #000000;
   --bgimage: url(/img/white_background.jpg);
+  --black: #ffffffa9;
 }
 
 //-----------Generel----------------//
@@ -60,17 +62,34 @@ nav {
 }
 
 #top_nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   background-color: var(--gold);
   padding-right: 3vw;
   padding-left: 3vw;
 }
+div#right_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+img#nav_icon {
+  place-self: center;
+}
+
+i.fa.fa-toggle-off {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i.fa.fa-shopping-basket.link_basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #nav_icon {
   width: 7.5vw;
-  margin-top: 3.8vh;
 }
 
 .fa {
@@ -142,6 +161,7 @@ footer {
   font-style: bold;
   color: white;
   font-size: 1.5rem;
+  place-self: center;
 }
 
 h1 {
@@ -190,7 +210,20 @@ p p {
 
 //------------------------------------------//
 //                 LIGHT MODE              //
-//----------------------------------------//
+//----------------------------------------//ø
+#bekraeftelse h2,
+#bekraeftelse h5 {
+  color: var(--white);
+}
+
+p#amount_in_basket {
+  color: white;
+}
+
+.more_body {
+  background-color: var(--black);
+}
+
 /* 
 //menu
 .lightmode #beer_info h2,
@@ -248,10 +281,6 @@ button.link_basket.lightmode,
   #menu_page ::before {
     font-size: 3.5vh;
   }
-
-  #nav_icon {
-    margin-top: 3.4vh;
-  }
 }
 
 //mobile L
@@ -282,10 +311,6 @@ button.link_basket.lightmode,
   img#nav_icon {
     width: 6.5vh;
   }
-
-  #nav_icon {
-    margin-top: 1.4vh;
-  }
 }
 
 //laptop
@@ -294,8 +319,9 @@ button.link_basket.lightmode,
     width: 6.5vh;
   }
 
-  #nav_icon {
-    margin-top: 1.3vh;
+  p#amount_in_basket {
+    right: 4.3%;
+    top: 3%;
   }
 }
 
@@ -304,10 +330,19 @@ button.link_basket.lightmode,
   img#nav_icon {
     width: 6.5vh;
   }
+
+  p#amount_in_basket {
+    right: 7.5%;
+    top: 3%;
+  }
 }
 
 //4k
 @media screen and (min-width: 2560px) {
+  p#amount_in_basket {
+    right: 8.3%;
+    top: 3%;
+  }
 }
 
 // //----------FRONTPAGE-----------------//
