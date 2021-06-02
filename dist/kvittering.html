@@ -7,18 +7,66 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-<script type="module" crossorigin src="./assets/kvittering.aa8da810.js"></script>
+<script type="module" crossorigin src="./assets/kvittering.1ef07320.js"></script>
+  <link rel="stylesheet" href="./assets/style_form.f85c4764.css">
 </head>
-<body>
+<body id="kvittering_page">
+    <nav>
+        <div id="top_nav">
+            <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon">
+            <h1 id="logo">FOOBAR</h1>
+            <div id="right_container">
+                <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
+                
+                <i class='fa fa-shopping-basket link_basket'></i>
+                <p id="amount_in_basket">0</p>
+            </div>
+        </div>
+        <div id="tilbage">
+            <i class='fa fa-caret-left'></i>
+            <h4>Back</h4>
+        </div>
+    </nav>
+<div id="header">
+<h2>Your receipts</h2>
+</div>
+
 <template class="receipt_template">
-    <h2 class="receipt_order_number"></h2>
-    <p class="receipt_order_time"></p>
-    <p class="receipt_subtotal"></p>
+    <div id="receipt_container">
+    <div id="ordernumber">
+        <h3>Ordernumber</h3>
+        <h2 class="receipt_order_number"></h2>
+    </div>
+
+    <div id="ordertime">
+        <h3>Ordertime</h3>
+        <p class="receipt_order_time"></p>
+    </div>
+
+    <div id="ordernumber">
+        <h3>Subtotal</h3>
+        <p class="receipt_subtotal"></p>
+    </div>
+    </div>
+
+    <div id="separation_bar"></div>
 </template>
 
 <section class="receipt_container">
 
 </section>
 
+<script>
+    function myFunction(x) {
+       x.classList.toggle("fa-toggle-on");
+
+       if (document.body.hasAttribute('data-theme', 'light')) {
+        document.body.removeAttribute('data-theme', 'light');
+       }else {
+        document.body.setAttribute('data-theme', 'light');
+     }
+       console.log("jegvirker");
+       }
+</script>
 </body>
 </html>
