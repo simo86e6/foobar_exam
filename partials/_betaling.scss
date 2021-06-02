@@ -170,20 +170,12 @@ input.invalid:not(:focus):not(:placeholder-shown) {
     -ms-transform: translateY(-78px) translateX(158px);
     -webkit-transform: translateY(-78px) translateX(158px);
   }
-  .card_wrapper
-    > div:nth-child(2)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > .star {
+  .card_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > .star {
     transform: translateY(-75px) translateX(55px);
     -ms-transform: translateY(-75px) translateX(55px);
     -webkit-transform: translateY(-75px) translateX(55px);
   }
-  .card_wrapper
-    > div:nth-child(2)
-    > div:nth-child(1)
-    > div:nth-child(2)
-    > .star {
+  .card_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > .star {
     transform: translateY(-75px) translateX(45px);
     -webkit-transform: translateY(-75px) translateX(45px);
     -ms-transform: translateY(-75px) translateX(45px);
