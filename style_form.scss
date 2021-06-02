@@ -10,14 +10,14 @@
   --yellow: #f2c029;
   --gold: #bf8b2a;
   --white: #ffffff;
-  --bgimage: url(/img/dark_background.jpg);
+  --bgimage: url("/img/dark_background.jpg");
   --black: #00000098;
 }
 
 [data-theme="light"] {
   --yellow: #6b4f0c;
   --white: #000000;
-  --bgimage: url(/img/white_background.jpg);
+  --bgimage: url("/img/white_background.jpg");
   --black: #ffffffa9;
 }
 
@@ -68,9 +68,17 @@ nav {
   padding-right: 3vw;
   padding-left: 3vw;
 }
+
+p#amount_in_basket {
+  right: 2.5vw;
+  top: 3vw;
+  position: absolute;
+  align-self: center;
+}
+
 div#right_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 img#nav_icon {
@@ -96,7 +104,7 @@ i.fa.fa-shopping-basket.link_basket {
   cursor: pointer;
 }
 
-//DROPDOWN
+/* //DROPDOWN
 .dropdown {
   position: relative;
   display: inline-block;
@@ -116,12 +124,13 @@ i.fa.fa-shopping-basket.link_basket {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-//DROPDOWN SLUT
+//DROPDOWN SLUT */
 
 #tilbage {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
 }
 
 i.fa.fa-shopping-basket {
@@ -139,6 +148,15 @@ footer {
   justify-content: space-around;
 }
 
+footer h1 {
+  font-family: var(--sansserif_font);
+  font-weight: 900;
+  font-style: bold;
+  color: white;
+  font-size: 1.5rem;
+  place-self: center;
+}
+
 .fa {
   padding: 1vh;
 }
@@ -151,6 +169,12 @@ footer {
 #some,
 #contact {
   align-self: center;
+  display: flex;
+}
+
+#contact ::before,
+#some ::before {
+  font-size: 2.5vh;
 }
 
 //-----------FONTS----------------//
@@ -296,6 +320,16 @@ button.link_basket.lightmode,
   img#nav_icon {
     width: 5.5vh;
   }
+
+  p#amount_in_basket {
+    right: 2.5vw;
+    top: 1vw;
+  }
+
+  #contact ::before,
+  #some ::before {
+    font-size: 2.5vh;
+  }
 }
 
 //tablet
@@ -311,6 +345,17 @@ button.link_basket.lightmode,
   img#nav_icon {
     width: 6.5vh;
   }
+
+  p#amount_in_basket {
+    right: 3vw;
+    top: 0.7vw;
+  }
+
+  #contact ::before,
+  #some ::before {
+    font-size: 2.5vh;
+    align-self: center;
+  }
 }
 
 //laptop
@@ -320,8 +365,14 @@ button.link_basket.lightmode,
   }
 
   p#amount_in_basket {
-    right: 4.3%;
-    top: 3%;
+    right: 4vw;
+    top: 0.7vw;
+  }
+
+  #contact ::before,
+  #some ::before {
+    font-size: 4.5vh;
+    align-self: center;
   }
 }
 
@@ -332,17 +383,21 @@ button.link_basket.lightmode,
   }
 
   p#amount_in_basket {
-    right: 7.5%;
-    top: 3%;
+    right: 4.5vw;
+    top: 0.6vw;
+  }
+}
+
+//random
+@media screen and (min-width: 2000px) {
+  p#amount_in_basket {
+    right: 3.8vw;
+    top: -0.4vw;
   }
 }
 
 //4k
 @media screen and (min-width: 2560px) {
-  p#amount_in_basket {
-    right: 8.3%;
-    top: 3%;
-  }
 }
 
 // //----------FRONTPAGE-----------------//

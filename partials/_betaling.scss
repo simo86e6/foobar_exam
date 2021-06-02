@@ -384,6 +384,12 @@ label.labels {
 //   display: flex;
 // }
 
+#betaling p#total_price {
+  font-family: var(--handwritten_font);
+  color: var(--yellow);
+  font-size: 1rem;
+  font-weight: 700;
+}
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
@@ -398,6 +404,9 @@ label.labels {
 
 //tablet
 @media screen and (min-width: 768px) {
+  #betaling p#total_price {
+    font-size: 1.4rem;
+  }
 }
 
 //laptop

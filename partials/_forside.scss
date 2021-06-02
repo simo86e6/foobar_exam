@@ -59,20 +59,17 @@
   font-size: 3vh;
 }
 
+#form_forside #right_container {
+  display: unset;
+  grid-template-columns: unset;
+}
+
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
 
 //mobile M
 @media screen and (min-width: 375px) {
-  div#right_container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  #form_forside img#nav_icon {
-    margin-top: unset;
-  }
 }
 
 //mobile L
@@ -110,7 +107,7 @@
 //laptop L
 @media screen and (min-width: 1440px) {
   #form_forside #content_flex h1 {
-    font-size: 10rem;
+    font-size: 7.5rem;
   }
 
   #form_forside #content_flex h2 {
@@ -119,6 +116,7 @@
 
   #form_forside #btn {
     margin-top: 7vh;
+    padding: 3.5vh 7vh;
   }
 
   #form_forside #content_flex {
