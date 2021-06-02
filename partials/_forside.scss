@@ -55,20 +55,29 @@
   margin-top: 15vh;
   cursor: pointer;
 }
+#form_forside #btn:hover {
+  background-color: #f2c0292a;
+  transition: 0.2s ease-in;
+}
 
-#btn_dashboard {
+button#dashboard_btn {
   cursor: pointer;
-  padding-left: 9vh;
-  padding-right: 9vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
   border-radius: 24px;
   border: solid;
-  border-color: var(--yellow);
+  border-color: transparent;
   background: transparent;
   color: white;
   font-family: "marydale";
   font-weight: 900;
   font-size: 0.8rem;
-  margin-top: 10vh;
+  margin-top: 5vh;
+}
+
+button#dashboard_btn:hover {
+  color: var(--yellow);
+  transition: 0.2s ease-in;
 }
 
 #form_forside ::before {

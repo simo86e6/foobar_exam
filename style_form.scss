@@ -11,14 +11,14 @@
   --yellow: #f2c029;
   --gold: #bf8b2a;
   --white: #ffffff;
-  --bgimage: url("../img/dark_background.jpg");
+  --bgimage: url("/img/dark_background.jpg");
   --black: #00000098;
 }
 
 [data-theme="light"] {
   --yellow: #6b4f0c;
   --white: #000000;
-  --bgimage: url("../img/white_background.jpg");
+  --bgimage: url("/img/white_background.jpg");
   --black: #ffffffa9;
 }
 
@@ -101,8 +101,17 @@ i.fa.fa-shopping-basket.link_basket {
   width: 7.5vw;
 }
 
-.fa {
+nav img:hover,
+nav .fa:hover,
+footer img:hover,
+footer .fa:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+p#amount_in_basket {
+  z-index: 1;
 }
 
 /* //DROPDOWN
@@ -303,8 +312,7 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before,
-  #kvittering_page ::before {
+  #menu_page ::before {
     font-size: 3.5vh;
   }
 }
@@ -315,8 +323,7 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before,
-  #kvittering_page ::before {
+  #menu_page ::before {
     font-size: 4.5vh;
   }
 
@@ -341,8 +348,7 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before,
-  #kvittering_page ::before {
+  #menu_page ::before {
     font-size: 5.5vh;
   }
 
