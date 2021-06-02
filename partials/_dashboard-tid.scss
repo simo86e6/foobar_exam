@@ -20,8 +20,8 @@
   background-size: cover;
   border: 4px solid #bf8b2a;
   border-radius: 50%;
-  box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029,
-    inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
+  // box-shadow: -4px -4px 10px #f2c029, inset 4px 4px 10px #f2c029,
+  //   inset -4px -4px 10px #f2c029, 4px 4px 10px #f2c029;
 }
 
 .clock:before {
@@ -308,4 +308,7 @@
 
 //3440 - 1040
 @media screen and (min-width: 3440px) {
+  #countdown_text {
+    margin-top: 8vh;
+  }
 }
