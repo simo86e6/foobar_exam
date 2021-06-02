@@ -9,25 +9,21 @@
     <title>form_betaling</title>
 </head>
 <body id="betaling">
-    <nav>
-        <div id="top_nav">
-          <div class="dropdown">
-            <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon">
-          
-
-            <div class="dropdown-content">
-              <p>DIT BESTILLINGSNUMMER</p>
-            </div>
+  <nav>
+    <div id="top_nav">
+        <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon">
+        <h1 id="logo">FOOBAR</h1>
+        <div id="right_container">
+            <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
+            <p id="amount_in_basket">0</p>
+            <i class='fa fa-shopping-basket link_basket'></i>
         </div>
-            <h1 id="logo">FOOBAR</h1>
-            <i class='fa fa-shopping-basket'></i>
-        </div>
-
-        <div id="tilbage">
-            <i class='fa fa-caret-left'></i>
-            <h4>Gå tilbage</h4>
-        </div>
-    </nav>
+    </div>
+    <div id="tilbage">
+        <i class='fa fa-caret-left'></i>
+        <h4>Gå tilbage</h4>
+    </div>
+</nav>
 
     <container id="kort_oplysninger">
         
@@ -98,5 +94,17 @@
     </footer>
     
     <script type="module" src="/betaling.js"></script>
+    <script>
+      function myFunction(x) {
+         x.classList.toggle("fa-toggle-on");
+
+         if (document.body.hasAttribute('data-theme', 'light')) {
+          document.body.removeAttribute('data-theme', 'light');
+         }else {
+          document.body.setAttribute('data-theme', 'light');
+       }
+         console.log("jegvirker");
+         }
+  </script>
 </body>
 </html>

@@ -65,6 +65,14 @@
 
 //mobile M
 @media screen and (min-width: 375px) {
+  div#right_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #form_forside img#nav_icon {
+    margin-top: unset;
+  }
 }
 
 //mobile L
