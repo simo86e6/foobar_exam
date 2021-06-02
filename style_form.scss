@@ -11,12 +11,14 @@
   --gold: #bf8b2a;
   --white: #ffffff;
   --bgimage: url(/img/dark_background.jpg);
+  --black: #00000098;
 }
 
 [data-theme="light"] {
   --yellow: #6b4f0c;
   --white: #000000;
   --bgimage: url(/img/white_background.jpg);
+  --black: #ffffffa9;
 }
 
 //-----------Generel----------------//
@@ -216,6 +218,10 @@ p p {
 
 p#amount_in_basket {
   color: white;
+}
+
+.more_body {
+  background-color: var(--black);
 }
 
 /* 
