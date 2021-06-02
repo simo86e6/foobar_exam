@@ -52,7 +52,7 @@ function formFilledCheck(event){
   }
 
   if(isNameFilled && isCardNumberFilled && isMonthFilled && isYearFilled && isSecureFilled){
-    debugger;
+    // debugger;
     event.preventDefault();
     postHeroku()
   }
@@ -169,7 +169,7 @@ orderedBeers.forEach(beer => {
 }
 
 async function postHeroku() {
-  debugger;
+  // debugger;
     let herokuOrderString = JSON.stringify(herokuOrder);
 
     let postOrder = await fetch(orderUrl, {
