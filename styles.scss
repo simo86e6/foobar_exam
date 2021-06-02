@@ -357,53 +357,8 @@ header {
   }
 }
 
-//1600
-@media screen and (min-width: 1600px) {
-  //FONTS
-
-  h1 {
-    font-size: 4vh;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-  }
-
-  h3 {
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1.6rem;
-  }
-
-  .fa-gear::before,
-  .fa-cog::before {
-    font-size: 2.6rem;
-  }
-
-  .bartender_name {
-    font-size: 2rem;
-  }
-
-  //GENEREL
-
-  header {
-    margin-bottom: 3vh;
-  }
-
-  #clock,
-  #ready_orders,
-  #storage {
-    height: 48vh;
-  }
-
-  #queue,
-  #bartenders {
-    height: 27vh;
-  }
+//1530
+@media screen and (min-width: 1530px) {
 }
 
 //1920 - 1080
@@ -452,5 +407,44 @@ header {
   #queue,
   #bartenders {
     height: 25vh;
+  }
+}
+
+//3440 - 1040
+@media screen and (min-width: 3440px) {
+  //FONTS
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .fa-gear::before,
+  .fa-cog::before {
+    font-size: 2.6rem;
+  }
+
+  .bartender_name {
+    font-size: 2.4rem;
+  }
+
+  //GENEREL
+
+  #clock,
+  #ready_orders,
+  #storage {
+    height: 50vh;
+  }
+
+  #queue,
+  #bartenders {
+    height: 30vh;
   }
 }
