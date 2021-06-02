@@ -141,7 +141,7 @@ function createBeerObject(data){
       });
 
       if(!beerNamesOnTap.includes(beerObject.name)){
-        clone.querySelector(".add_to_basket").textContent = "Not on tap";
+        clone.querySelector(".add_to_basket").classList.add("not_on_tap");
       } else {
         clone.querySelector("#test").addEventListener("click", function () {
       
@@ -157,6 +157,13 @@ function createBeerObject(data){
       }
 
     document.querySelector(".beer_container").appendChild(clone);
+    let notOnTap = document.querySelectorAll(".not_on_tap");
+    notOnTap.forEach(tap => {
+      tap.innerHTML = "Not on tap";
+      tap
+    });
+
+
   }
 
 
