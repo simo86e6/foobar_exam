@@ -47,6 +47,20 @@ button {
   justify-content: center;
 }
 
+button,
+#logo,
+#logo1 {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button:hover,
+#logo:hover,
+#logo1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 body {
   background-image: var(--bgimage);
   background-repeat: no-repeat;

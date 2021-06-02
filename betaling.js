@@ -189,9 +189,10 @@ async function postHeroku() {
 
   async function saveInRestDb(orderId){
     
+    let userName = sessionStorage.getItem("userName");
     let payload = {
       order: restOrder,
-      name: "Simone",
+      name: userName,
       orderId: orderId,
       subTotal: sessionStorage.getItem("totalPrice"),
       placementTime: new Date()
