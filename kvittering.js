@@ -5,7 +5,6 @@ import './style_form.scss'
 displayReceipts();
 
 async function displayReceipts(){
-    // debugger;
     let userName = "Simone";
     let url = 'https://foobar-4ea8.restdb.io/rest/receipt?q={"name": "' + userName +'"}';
     let apiKey = "60b6304c318a330b62f58925";
@@ -17,12 +16,14 @@ async function displayReceipts(){
           "cache-control": "no-cache",
         },
       });
-
+      debugger;
     const receipts = await response.json();
+    receipts.sort(function(a, b){return b.orderId - a.orderId});
     receipts.forEach(receipt => {
         const clone = document.querySelector(".receipt_template").content.cloneNode(true);
         clone.querySelector(".receipt_order_number").textContent = receipt.orderId;
-        // clone.querySelector(".receipt_order_time").textContent = receipt.orderTime;
+        let timeFormatted = new Date(receipt.placementTime);
+        clone.querySelector(".receipt_order_time").textContent = timeFormatted;
         clone.querySelector(".receipt_subtotal").textContent = receipt.subTotal;
         document.querySelector(".receipt_container").appendChild(clone);
         });

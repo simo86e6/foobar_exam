@@ -193,7 +193,8 @@ async function postHeroku() {
       order: restOrder,
       name: "Simone",
       orderId: orderId,
-      subTotal: sessionStorage.getItem("totalPrice")
+      subTotal: sessionStorage.getItem("totalPrice"),
+      placementTime: new Date()
     }
 
     let url = "https://foobar-4ea8.restdb.io/rest/receipt";

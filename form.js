@@ -118,22 +118,6 @@ function createBeerObject(data){
     clone.querySelector(".beer_overall").textContent = beerObject.overall;
     clone.querySelector(".counter_display").textContent = 0;
 
-    clone.querySelector(".counter_plus").addEventListener("click", function () {
-        let counterDisplay = this.previousElementSibling;
-        let currentCount = counterDisplay.innerHTML;
-        currentCount++;
-        counterDisplay.innerHTML = currentCount.toString();
-      });
-
-    clone.querySelector(".counter_minus").addEventListener("click", function () {
-        let counterDisplay = this.nextElementSibling;
-        let currentCount = counterDisplay.innerHTML;
-        if(currentCount >= 1){
-          currentCount--;
-          counterDisplay.innerHTML = currentCount.toString();
-        }
-      });
-
       clone.querySelector(".collapsible").addEventListener("click", function () {
         let parent = this.parentElement;
         let sibling = parent.nextElementSibling;
@@ -154,13 +138,28 @@ function createBeerObject(data){
   
           counterDisplay.innerHTML = 0;
         });
+
+        clone.querySelector(".counter_plus").addEventListener("click", function () {
+          let counterDisplay = this.previousElementSibling;
+          let currentCount = counterDisplay.innerHTML;
+          currentCount++;
+          counterDisplay.innerHTML = currentCount.toString();
+        });
+  
+      clone.querySelector(".counter_minus").addEventListener("click", function () {
+          let counterDisplay = this.nextElementSibling;
+          let currentCount = counterDisplay.innerHTML;
+          if(currentCount >= 1){
+            currentCount--;
+            counterDisplay.innerHTML = currentCount.toString();
+          }
+        });
       }
 
     document.querySelector(".beer_container").appendChild(clone);
     let notOnTap = document.querySelectorAll(".not_on_tap");
     notOnTap.forEach(tap => {
-      tap.innerHTML = "Not on tap";
-      
+      tap.innerHTML = "Not on tap"; 
     });
 
 
