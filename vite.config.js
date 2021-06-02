@@ -11,7 +11,8 @@ module.exports = {
         menu: resolve(__dirname, 'menu.html'),
         kurv: resolve(__dirname, 'kurv.html'),
         betaling: resolve(__dirname, 'betaling.html'),
-        bekraeftelse: resolve(__dirname, 'bekraeftelse.html')
+        bekraeftelse: resolve(__dirname, 'bekraeftelse.html'),
+        kvittering: resolve(__dirname, 'kvittering.html')
       },
     },
   },
