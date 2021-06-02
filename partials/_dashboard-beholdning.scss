@@ -36,10 +36,48 @@
   height: 27vh;
 }
 
+//SMALL PHONE
+@media screen and (max-width: 570px) {
+}
+
+//BIG PHONE
+@media screen and (min-width: 800px) {
+}
+
 //IPAD
 @media screen and (min-width: 1000px) {
   #storage img {
     width: auto;
     height: 20vh;
   }
+}
+
+//1280 - 800
+@media screen and (min-width: 1260px) {
+  #storage img {
+    height: 25vh;
+  }
+
+  #stock,
+  #stock1,
+  #stock2 {
+    margin-top: 2vh;
+  }
+}
+
+//1420 - 900
+@media screen and (min-width: 1420px) {
+  #stock,
+  #stock1,
+  #stock2 {
+    margin-top: 0.5vh;
+  }
+}
+
+//1600
+@media screen and (min-width: 1600px) {
+}
+
+//1920 - 1080
+@media screen and (min-width: 1900px) {
 }

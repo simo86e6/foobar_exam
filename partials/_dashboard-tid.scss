@@ -98,6 +98,60 @@
   border-radius: 6px 6px 0 0;
 }
 
+//SMALL PHONE
+@media screen and (max-width: 570px) {
+  #countdown_text {
+    margin-top: 4vh;
+  }
+
+  .clock {
+    width: 90px;
+    height: 90px;
+  }
+
+  .clock:before {
+    width: 3px;
+    height: 3px;
+  }
+
+  .clock .hour,
+  .hr {
+    width: 60px;
+    height: 60px;
+  }
+
+  .clock .min,
+  .mn {
+    width: 100px;
+    height: 100px;
+  }
+
+  .clock .sec,
+  .sc {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hr:before {
+    width: 1.5px;
+    height: 20px;
+  }
+
+  .mn:before {
+    width: 1.5px;
+    height: 40px;
+  }
+
+  .sc:before {
+    width: 0.5px;
+    height: 45px;
+  }
+}
+
+//BIG PHONE
+@media screen and (min-width: 800px) {
+}
+
 //IPAD
 @media screen and (min-width: 1000px) {
   #countdown_text {
@@ -148,8 +202,8 @@
   }
 }
 
-//MINDRE COMPUTER
-@media screen and (min-width: 1240px) {
+//1280 - 800
+@media screen and (min-width: 1260px) {
   .clock {
     width: 190px;
     height: 190px;
@@ -194,8 +248,20 @@
   }
 }
 
+//1420 - 900
+@media screen and (min-width: 1420px) {
+}
+
+//1600
+@media screen and (min-width: 1600px) {
+}
+
 //1920 - 1080
 @media screen and (min-width: 1900px) {
+  #countdown_text {
+    margin-top: 4vh;
+  }
+
   .clock {
     width: 290px;
     height: 290px;
