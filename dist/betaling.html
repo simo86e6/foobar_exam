@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>form_betaling</title>
-<script type="module" crossorigin src="./assets/betaling.077acd8a.js"></script>
-  <link rel="stylesheet" href="./assets/style_form.706a7061.css">
+<script type="module" crossorigin src="./assets/betaling.5a15144d.js"></script>
+  <link rel="stylesheet" href="./assets/style_form.94d04c9c.css">
 </head>
 <body id="betaling">
   <nav>
     <div id="top_nav">
         <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon" onclick="window.location.href=('kvittering.html')">
-        <h1 id="logo" onclick="window.location.href=('forside.html')">FOOBAR</h1>
+        <h1 id="logo" onclick="window.location.href=('index.html')">FOOBAR</h1>
         <div id="right_container">
-            <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
+            <i onclick="toggleDarkLight(this)" class="fa fa-toggle-off"></i>
             <i class='fa fa-shopping-basket link_basket' onclick="window.location.href=('kurv.html')"></i>
         </div>
     </div>
@@ -87,7 +87,7 @@
            <i class="fa fa-envelope"></i>
            <i class="fa fa-phone"></i>
         </div>
-        <h1 id="logo" onclick="window.location.href=('forside.html')">FOOBAR</h1>
+        <h1 id="logo" onclick="window.location.href=('index.html')">FOOBAR</h1>
         <div id="some">
            <i class="fa fa-facebook-official"></i>
            <i class="fa fa-instagram"></i>
@@ -96,7 +96,7 @@
     
     
     <script>
-      function myFunction(x) {
+      function toggleDarkLight(x) {
          x.classList.toggle("fa-toggle-on");
 
          if (document.body.hasAttribute('data-theme', 'light')) {

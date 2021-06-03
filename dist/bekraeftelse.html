@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/ibn7xue.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-<script type="module" crossorigin src="./assets/bekraeftelse.73fb7a68.js"></script>
-  <link rel="stylesheet" href="./assets/style_form.706a7061.css">
+<script type="module" crossorigin src="./assets/bekraeftelse.03edb230.js"></script>
+  <link rel="stylesheet" href="./assets/style_form.94d04c9c.css">
 </head>
 <body id="bekraeftelse">
     <nav>
@@ -16,7 +16,7 @@
             <img src="./assets/ordre_icon.925f3a69.svg" alt="bestillinger" id="nav_icon" onclick="window.location.href=('kvittering.html')">
             <h1 style="opacity: 0%;font-size: 0.5rem;" id="logo" onclick="window.location.href=('forside.html')">FOOBAR</h1>
             <div id="right_container">
-                <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
+                <i onclick="toggleDarkLight(this)" class="fa fa-toggle-off"></i>
                 <i class='fa fa-shopping-basket link_basket'></i>
             </div>
         </div>
@@ -30,14 +30,14 @@
         <p>We'll let you know, when your order is ready.<br>
             Still thirsty? then...</p>
         <button onclick="window.location.href=('menu.html')">ORDER BEER</button>
-        <h4 onclick="window.location.href=('forside.html')">Go to frontpage</h4>
+        <h4 onclick="window.location.href=('index.html')">Go to frontpage</h4>
     </container>
 
     
 
     
     <script>
-        function myFunction(x) {
+        function toggleDarkLight(x) {
            x.classList.toggle("fa-toggle-on");
 
            if (document.body.hasAttribute('data-theme', 'light')) {

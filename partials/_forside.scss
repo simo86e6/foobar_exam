@@ -23,11 +23,20 @@ input#user_name {
   text-align: center;
   align-self: center;
   margin-top: 4rem;
-  font-family: "marydale";
+
   border: solid;
-  border-color: var(--yellow);
-  font-family: var(--sansserif_font);
+
+
   color: gray;
+  padding: 0.8rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px var(--black);
+  border: 1px solid var(--yellow);
+  display: block;
+  background-color: white;
+  margin: 4.2rem 0 0.2rem 0;
+  color: gray;
+  font-family: var(--sansserif_font);
 }
 
 #content_flex {
@@ -68,6 +77,7 @@ input#user_name {
   margin-top: 10vh;
   cursor: pointer;
 }
+
 #form_forside #btn:hover {
   background-color: #f2c0292a;
   transition: 0.2s ease-in;
@@ -107,12 +117,10 @@ button#dashboard_btn:hover {
 //----------------------------------------//
 
 //mobile M
-@media screen and (min-width: 375px) {
-}
+@media screen and (min-width: 375px) {}
 
 //mobile L
-@media screen and (min-width: 425px) {
-}
+@media screen and (min-width: 425px) {}
 
 //tablet
 @media screen and (min-width: 768px) {
@@ -139,8 +147,7 @@ button#dashboard_btn:hover {
 }
 
 //laptop
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 //laptop L
 @media screen and (min-width: 1440px) {
@@ -163,5 +170,4 @@ button#dashboard_btn:hover {
 }
 
 //4k
-@media screen and (min-width: 2560px) {
-}
+@media screen and (min-width: 2560px) {}

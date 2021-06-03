@@ -12,9 +12,9 @@
   <nav>
     <div id="top_nav">
         <img src="/img/ordre_icon.svg" alt="bestillinger" id="nav_icon" onclick="window.location.href=('kvittering.html')">
-        <h1 id="logo" onclick="window.location.href=('forside.html')">FOOBAR</h1>
+        <h1 id="logo" onclick="window.location.href=('index.html')">FOOBAR</h1>
         <div id="right_container">
-            <i onclick="myFunction(this)" class="fa fa-toggle-off"></i>
+            <i onclick="toggleDarkLight(this)" class="fa fa-toggle-off"></i>
             <i class='fa fa-shopping-basket link_basket' onclick="window.location.href=('kurv.html')"></i>
         </div>
     </div>
@@ -85,7 +85,7 @@
            <i class="fa fa-envelope"></i>
            <i class="fa fa-phone"></i>
         </div>
-        <h1 id="logo" onclick="window.location.href=('forside.html')">FOOBAR</h1>
+        <h1 id="logo" onclick="window.location.href=('index.html')">FOOBAR</h1>
         <div id="some">
            <i class="fa fa-facebook-official"></i>
            <i class="fa fa-instagram"></i>
@@ -94,7 +94,7 @@
     
     <script type="module" src="/betaling.js"></script>
     <script>
-      function myFunction(x) {
+      function toggleDarkLight(x) {
          x.classList.toggle("fa-toggle-on");
 
          if (document.body.hasAttribute('data-theme', 'light')) {

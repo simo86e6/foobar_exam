@@ -6,7 +6,6 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        forside: resolve(__dirname, 'forside.html'),
         dashboard: resolve(__dirname, 'dashboard.html'),
         menu: resolve(__dirname, 'menu.html'),
         kurv: resolve(__dirname, 'kurv.html'),
