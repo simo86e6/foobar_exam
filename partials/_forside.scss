@@ -18,20 +18,23 @@
 }
 
 input#user_name {
-  width: 200px;
+  width: 32vh;
+  height: 2vh;
   text-align: center;
   align-self: center;
   margin-top: 4rem;
   font-family: "marydale";
   border: solid;
   border-color: var(--yellow);
+  font-family: var(--sansserif_font);
+  color: gray;
 }
 
 #content_flex {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 31vh;
+  margin-top: 11vh;
 }
 
 #content_flex h1,
@@ -119,7 +122,7 @@ button#dashboard_btn:hover {
   }
 
   #form_forside #content_flex {
-    margin-top: 26vh;
+    margin-top: 10vh;
   }
 
   #form_forside #btn {
@@ -155,7 +158,7 @@ button#dashboard_btn:hover {
   }
 
   #form_forside #content_flex {
-    margin-top: 21vh;
+    margin-top: 10vh;
   }
 }
 

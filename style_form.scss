@@ -46,19 +46,27 @@ button {
   display: flex;
   justify-content: center;
 }
-
-button,
-#logo,
-#logo1 {
+#bottom_btn button:hover,
+.beer_container button:hover,
+#buy_button button:hover,
+#finalize_purches:hover,
+#bekraeftelse button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  background-color: #f2c0292a;
+  transition: 0.2s ease-in;
 }
 
-button:hover,
-#logo:hover,
-#logo1:hover {
+#bekraeftelse h4:hover {
+  color: var(--yellow);
+  transition: 0.2s ease-in;
   cursor: pointer;
-  transform: scale(1.1);
+}
+
+nav h1#logo:hover,
+footer h1#logo1:hover {
+  cursor: pointer;
+  color: #ffffffbb;
+  transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -201,6 +209,10 @@ footer h1 {
   font-size: 2.5vh;
 }
 
+i.fa.fa-caret-left {
+  font-size: 0.1rem;
+}
+
 //-----------FONTS----------------//
 
 #logo {
@@ -326,7 +338,8 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before {
+  #menu_page ::before,
+  #kvittering_page ::before {
     font-size: 3.5vh;
   }
 }
@@ -337,7 +350,8 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before {
+  #menu_page ::before,
+  #kvittering_page ::before {
     font-size: 4.5vh;
   }
 
@@ -362,7 +376,8 @@ button.link_basket.lightmode,
   #bekraeftelse ::before,
   #betaling ::before,
   #kurv_page ::before,
-  #menu_page ::before {
+  #menu_page ::before,
+  #kvittering_page ::before {
     font-size: 5.5vh;
   }
 

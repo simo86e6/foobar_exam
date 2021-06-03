@@ -62,18 +62,18 @@
 }
 /*****B*****/
 
-input {
+#betaling input {
   display: block;
   margin-bottom: 1rem;
   padding: 0.8rem 0.5rem;
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
-  border: 1px solid var(--dark);
+  box-shadow: 1px 1px 2px var(--black);
+  border: 1px solid var(--yellow);
   display: block;
   background-color: white;
   margin: 0.2rem 0 0.2rem 0;
-  color: var(--purple);
-  font: var(--head4);
+  color: gray;
+  font-family: var(--sansserif_font);
   margin-bottom: 2rem;
   margin-top: 0.3rem;
 }
@@ -170,12 +170,20 @@ input.invalid:not(:focus):not(:placeholder-shown) {
     -ms-transform: translateY(-78px) translateX(158px);
     -webkit-transform: translateY(-78px) translateX(158px);
   }
-  .card_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > .star {
+  .card_wrapper
+    > div:nth-child(2)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > .star {
     transform: translateY(-75px) translateX(55px);
     -ms-transform: translateY(-75px) translateX(55px);
     -webkit-transform: translateY(-75px) translateX(55px);
   }
-  .card_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > .star {
+  .card_wrapper
+    > div:nth-child(2)
+    > div:nth-child(1)
+    > div:nth-child(2)
+    > .star {
     transform: translateY(-75px) translateX(45px);
     -webkit-transform: translateY(-75px) translateX(45px);
     -ms-transform: translateY(-75px) translateX(45px);
