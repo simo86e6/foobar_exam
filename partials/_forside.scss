@@ -26,7 +26,6 @@ input#user_name {
 
   border: solid;
 
-
   color: gray;
   padding: 0.8rem 0.5rem;
   border-radius: 10px;
@@ -117,10 +116,12 @@ button#dashboard_btn:hover {
 //----------------------------------------//
 
 //mobile M
-@media screen and (min-width: 375px) {}
+@media screen and (min-width: 375px) {
+}
 
 //mobile L
-@media screen and (min-width: 425px) {}
+@media screen and (min-width: 425px) {
+}
 
 //tablet
 @media screen and (min-width: 768px) {
@@ -147,7 +148,8 @@ button#dashboard_btn:hover {
 }
 
 //laptop
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 //laptop L
 @media screen and (min-width: 1440px) {
@@ -170,4 +172,5 @@ button#dashboard_btn:hover {
 }
 
 //4k
-@media screen and (min-width: 2560px) {}
+@media screen and (min-width: 2560px) {
+}
