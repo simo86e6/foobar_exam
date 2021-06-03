@@ -260,6 +260,10 @@ header {
     font-size: 1.4rem;
   }
 
+  #beer_pictures p {
+    font-size: 3rem;
+  }
+
   //GENEREL
 
   header {
@@ -302,6 +306,10 @@ header {
 
   .bartender_name {
     font-size: 1.6rem;
+  }
+
+  #beer_pictures p {
+    font-size: 3.5rem;
   }
 
   //GENEREL
@@ -364,6 +372,10 @@ header {
 
 //1530
 @media screen and (min-width: 1530px) {
+  //FONTS
+  #beer_pictures p {
+    font-size: 4rem;
+  }
 }
 
 //1920 - 1080
@@ -395,6 +407,10 @@ header {
 
   .bartender_name {
     font-size: 2rem;
+  }
+
+  #beer_pictures p {
+    font-size: 5rem;
   }
 
   //GENEREL
@@ -438,6 +454,10 @@ header {
 
   .bartender_name {
     font-size: 2.4rem;
+  }
+
+  #beer_pictures p {
+    font-size: 6.5rem;
   }
 
   //GENEREL
