@@ -311,14 +311,6 @@ function msToTime(s) {
    
 }
 
-// function hideBartenders(){
-//     debugger;
-//    let bartenders = document.querySelectorAll(".content");
-//    bartenders.forEach(bartender => {
-//        bartender.classList.add("jonas");
-//    });
-// }
-
 
 
 

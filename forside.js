@@ -1,6 +1,5 @@
 "use strict";
 import './style_form.scss'
-debugger;
 
 
 
@@ -17,7 +16,7 @@ if("userName" in sessionStorage === false){
 let username = "";
 
 function getUserName(event){
-    debugger;
+    
     let keyPressed = event.key;
     username = this.value + keyPressed;
     
