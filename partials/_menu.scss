@@ -188,6 +188,51 @@ p#amount_in_basket {
 @media screen and (min-width: 2560px) {
 }
 
+@media screen and (min-width: 3400px) {
+  #menu_page section.beer_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #menu_page #beer_info h2 {
+    font-size: 4rem;
+  }
+
+  #menu_page p.alcohol_procent {
+    font-size: 3rem;
+  }
+
+  #menu_page #beer_info h3 {
+    font-size: 3rem;
+  }
+
+  #menu_page button {
+    font-size: 3rem;
+  }
+
+  #menu_page .counter_display {
+    padding: 0.7vh;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  nav #logo,
+  footer #logo1 {
+    font-size: 3rem;
+  }
+
+  #tilbage {
+    font-size: 2rem;
+  }
+
+  #menu_page .product_txt h3 {
+    font-size: 3rem;
+  }
+
+  #menu_page .product_txt p {
+    font-size: 2rem;
+  }
+}
+
 .beerBody .summary {
   padding: 0;
   display: grid;

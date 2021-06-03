@@ -430,3 +430,34 @@ label.labels {
 //4k
 @media screen and (min-width: 2560px) {
 }
+
+@media screen and (min-width: 3400px) {
+  #betaling .credit_container {
+    margin-top: -12vh;
+  }
+
+  #betaling label.labels {
+    font-size: 3rem;
+  }
+
+  #betaling input {
+    padding: 1.8rem 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  #andet_betaling h2 {
+    font-size: 3rem;
+  }
+
+  #betaling p#total_price {
+    font-size: 3.4rem;
+  }
+
+  #andet_betaling button {
+    margin-top: -3vh;
+  }
+
+  #andet_betaling button {
+    font-size: 2rem;
+  }
+}

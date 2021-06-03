@@ -167,3 +167,38 @@
 //4k
 @media screen and (min-width: 2560px) {
 }
+
+@media screen and (min-width: 3400px) {
+  #bekraeftelse {
+    margin-top: 4vh;
+  }
+
+  #bekraeftelse h1 {
+    font-size: 9rem;
+  }
+
+  #bekraeftelse h2 {
+    font-size: 4rem;
+  }
+
+  #bekraeftelse h3 {
+    font-size: 8rem;
+  }
+
+  #bekraeftelse h5 {
+    font-size: 2.5rem;
+  }
+
+  #bekraeftelse p {
+    font-size: 3.3rem;
+  }
+
+  #bekraeftelse button {
+    padding: 3vh 5vh;
+    font-size: 3rem;
+  }
+
+  #bekraeftelse h4 {
+    font-size: 2rem;
+  }
+}

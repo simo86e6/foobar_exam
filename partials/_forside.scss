@@ -114,10 +114,12 @@ button#dashboard_btn:hover {
 //----------------------------------------//
 
 //mobile M
-@media screen and (min-width: 375px) {}
+@media screen and (min-width: 375px) {
+}
 
 //mobile L
-@media screen and (min-width: 425px) {}
+@media screen and (min-width: 425px) {
+}
 
 //tablet
 @media screen and (min-width: 768px) {
@@ -144,7 +146,8 @@ button#dashboard_btn:hover {
 }
 
 //laptop
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 //laptop L
 @media screen and (min-width: 1440px) {
@@ -167,4 +170,23 @@ button#dashboard_btn:hover {
 }
 
 //4k
-@media screen and (min-width: 2560px) {}
+@media screen and (min-width: 2560px) {
+}
+
+@media screen and (min-width: 3400px) {
+  #form_forside #content_flex h2 {
+    font-size: 5.7rem;
+  }
+
+  #form_forside #content_flex h1 {
+    font-size: 11.5rem;
+  }
+
+  #form_forside #btn {
+    font-size: 3.5rem;
+  }
+
+  #form_forside button {
+    font-size: 2.8rem;
+  }
+}

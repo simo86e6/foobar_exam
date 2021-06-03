@@ -207,3 +207,46 @@ section.basket_container {
 //4k
 @media screen and (min-width: 2560px) {
 }
+
+@media screen and (min-width: 3400px) {
+  #kurv_page #beer_info {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #kurv_page h2 {
+    font-size: 4.2rem;
+  }
+
+  #kurv_page #left_column {
+    font-size: 3rem;
+  }
+
+  #kurv_page #beer_info h3 {
+    font-size: 3rem;
+  }
+
+  #right_column #btns_container button {
+    font-size: 3rem;
+  }
+
+  #kurv_page #price_total p {
+    font-size: 2.5rem;
+  }
+
+  #kurv_page p.head2 {
+    font-size: 3.7rem;
+  }
+
+  #kurv button {
+    padding: 3vh 7.5vh;
+    font-size: 3rem;
+  }
+
+  #kurv_page p:nth-child(2) {
+    font-size: 3rem;
+  }
+
+  footer h1#logo {
+    font-size: 3rem;
+  }
+}
