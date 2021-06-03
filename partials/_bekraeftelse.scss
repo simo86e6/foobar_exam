@@ -164,6 +164,36 @@
   }
 }
 
+@media screen and (min-width: 1900px) {
+  #bekraeftelse {
+    margin-top: 4vh;
+  }
+
+  #bekraeftelse h1 {
+    font-size: 7rem;
+  }
+
+  #bekraeftelse h2 {
+    font-size: 3rem;
+  }
+
+  #bekraeftelse h5 {
+    font-size: 2.7rem;
+  }
+
+  #bekraeftelse p {
+    font-size: 2.3rem;
+  }
+
+  #bekraeftelse h4 {
+    font-size: 1.8rem;
+  }
+
+  #bekraeftelse button {
+    font-size: 1.6rem;
+  }
+}
+
 //4k
 @media screen and (min-width: 2560px) {
 }

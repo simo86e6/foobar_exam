@@ -184,6 +184,37 @@ p#amount_in_basket {
   }
 }
 
+@media screen and (min-width: 1900px) {
+  section.beer_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #beer_info h2 {
+    font-size: 3rem;
+  }
+  p.alcohol_procent {
+    font-size: 1.8rem;
+  }
+
+  #beer_info h3 {
+    margin-top: -1vh;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #menu_page button {
+    font-size: 1.6rem;
+  }
+
+  .product_txt h3 {
+    font-size: 2rem;
+  }
+
+  .product_txt p {
+    font-size: 1.4rem;
+  }
+}
+
 //4k
 @media screen and (min-width: 2560px) {
 }

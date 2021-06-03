@@ -169,8 +169,41 @@ button#dashboard_btn:hover {
   }
 }
 
+@media screen and (min-width: 1900px) {
+  button#dashboard_btn {
+    font-size: 1.8rem;
+  }
+
+  #form_forside #content_flex h2 {
+    font-size: 5.7rem;
+  }
+
+  #form_forside #content_flex h1 {
+    font-size: 9.5rem;
+  }
+
+  input#user_name {
+    font-size: 1.2rem;
+  }
+}
+
 //4k
 @media screen and (min-width: 2560px) {
+  button#dashboard_btn {
+    font-size: 2rem;
+  }
+
+  #form_forside #content_flex h2 {
+    font-size: 6.7rem;
+  }
+
+  #form_forside #content_flex h1 {
+    font-size: 10.5rem;
+  }
+
+  input#user_name {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (min-width: 3400px) {
@@ -182,7 +215,7 @@ button#dashboard_btn:hover {
     font-size: 11.5rem;
   }
 
-  #form_forside #btn {
+  button#dashboard_btn {
     font-size: 3.5rem;
   }
 

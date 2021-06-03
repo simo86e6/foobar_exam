@@ -204,6 +204,43 @@ section.basket_container {
   }
 }
 
+@media screen and (min-width: 1900px) {
+  #kurv_page h2 {
+    font-size: 2.7rem;
+    margin-bottom: 10vh;
+  }
+
+  #beer_info h2 {
+    font-size: 4rem;
+  }
+
+  #kurv_page p:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  #kurv_page h3.basket_line_total {
+    font-size: 3rem;
+  }
+
+  #kurv_page #price_total p {
+    font-size: 2rem;
+  }
+
+  #kurv_page p.head2 {
+    font-size: 2.7rem;
+  }
+
+  section.basket_container {
+    margin-top: -9vh;
+  }
+
+  #kurv button {
+    min-width: 25vw;
+    padding: 0.5vh 1.5vh;
+    font-size: 2rem;
+  }
+}
+
 //4k
 @media screen and (min-width: 2560px) {
 }

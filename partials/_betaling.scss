@@ -427,6 +427,37 @@ label.labels {
   }
 }
 
+@media screen and (min-width: 1900px) {
+  #tilbage {
+    font-size: 1.5rem;
+  }
+
+  #betaling .credit_container {
+    margin-top: -13vh;
+  }
+
+  #betaling label {
+    font-size: 2.2rem;
+  }
+
+  #betaling input {
+    font-size: 1.3rem;
+  }
+
+  #betaling h2 {
+    font-size: 2rem;
+  }
+
+  #betaling p#total_price {
+    font-size: 2rem;
+  }
+
+  #andet_betaling button {
+    margin-top: -1vh;
+    margin-bottom: 10vh;
+  }
+}
+
 //4k
 @media screen and (min-width: 2560px) {
 }
