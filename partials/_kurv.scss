@@ -97,6 +97,16 @@ section.basket_container {
 #kurv_page h3.basket_line_total {
   font-size: 1rem;
 }
+
+#right_column button {
+  padding: 0.1vh 0.5vh;
+}
+
+#right_column #btns_container button:hover {
+  cursor: pointer;
+  background-color: #f2c0292a;
+  transition: 0.2s ease-in;
+}
 //------------------------------------------//
 //                 MEDIAQUIRES             //
 //----------------------------------------//
@@ -156,6 +166,11 @@ section.basket_container {
 
   #kurv #beer {
     height: 16vh;
+  }
+
+  #right_column #btns_container button {
+    padding: 0.1vh 2.01vh;
+    min-width: unset;
   }
 }
 
