@@ -16,7 +16,7 @@ async function displayReceipts(){
           "cache-control": "no-cache",
         },
       });
-      debugger;
+      
     const receipts = await response.json();
     receipts.sort(function(a, b){return b.orderId - a.orderId});
     receipts.forEach(receipt => {
